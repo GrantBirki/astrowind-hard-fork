@@ -5,6 +5,8 @@ dist/
 # dependencies
 node_modules/
 
+.vscode/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
@@ -19,7 +21,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-package-lock.json
+# package-lock.json
 pnpm-lock.yaml
 
 .astro
