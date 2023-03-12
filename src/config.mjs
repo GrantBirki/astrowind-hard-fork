@@ -3,8 +3,8 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'AstroWind',
 
-  origin: 'https://grantbirki.github.io',
-  basePathname: '/astrowind',
+  origin: 'https://astro-demo.birki.io',
+  basePathname: '/',
   trailingSlash: false,
 
   title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
