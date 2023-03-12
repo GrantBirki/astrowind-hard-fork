@@ -1,60 +1,8 @@
 # 🚀 AstroWind
 
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
+This is a custom AstroWind template for deployment to GitHub pages
 
-🌟 _Most *starred* & *forked* Astro theme in 2022_. 🌟
-
-**AstroWind** is a free and open-source template to make your website using **[Astro 2.0](https://astro.build/blog/astro-2/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
-
-## Features
-
-- ✅ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/)) supporting **Dark mode**.
-- ✅ **Production-ready** scores in [Lighthouse](https://web.dev/measure/) and [PageSpeed Insights](https://pagespeed.web.dev/) reports.
-- ✅ **Fast and SEO friendly blog** with automatic **RSS feed** ([@astrojs/rss](https://docs.astro.build/en/guides/rss/)), [**MDX** support](https://docs.astro.build/en/guides/integrations-guide/mdx/), **Categories & Tags**, **Social Share**, ...
-- ✅ **Image optimization** ([@astrojs/images](https://docs.astro.build/en/guides/integrations-guide/image/)) and **Font optimization**.
-- ✅ Generation of **project sitemap** based on your routes ([@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)).
-- ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
-
-<br>
-
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/screenshot-astro2.jpg" alt="AstroWind Theme Screenshot">
-
-[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
-[![License](https://img.shields.io/github/license/onwidget/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/astrowind)
-[![Stars](https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
-[![Forks](https://img.shields.io/github/forks/onwidget/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
-
-<br>
-
-<details open>
-<summary>Table of Contents</summary>
-
-- [Demo](#demo)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-
-</details>
-
-<br>
-
-## Demo
-
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
-
-<br>
+The original AstroWind template can be found here: [source](https://github.com/onwidget/astrowind)
 
 ## Getting started
 
@@ -66,7 +14,7 @@ Very little vanilla javascript is used only to provide basic functionality so th
 
 Inside AstroWind template, you'll see the following folders and files:
 
-```
+```text
 /
 ├── public/
 │   ├── robots.txt
@@ -117,12 +65,6 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
-[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/astrowind/tree/main)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Update `config.mjs` and contents. Have fun!
-
-<br>
-
 ### Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -136,8 +78,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run format`      | Format codes with Prettier                         |
 | `npm run lint:eslint` | Run Eslint                                         |
 | `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
-
-<br>
 
 ### Configuration
 
@@ -202,8 +142,6 @@ const CONFIG = {
 };
 ```
 
-<br>
-
 ### Deploy
 
 #### Deploy to production (manual)
@@ -230,29 +168,26 @@ Clone this repository on own GitHub account and deploy to Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
 
-<br>
+#### Deploy to GitHub Pages
 
-## Frequently Asked Questions
+First, clone this repository on own GitHub account
 
-- Why?
--
--
+If you want to deploy to a basic GitHub domain name, do the following to [`src/config.mjs`](src/config.mjs):
 
-<br>
+```js
+origin: 'https://grantbirki.github.io', // Change this to your GitHub username
+basePathname: '/astrowind', // Change this to your repository name
+```
 
-## Related projects
+If you want to use your own custom domain name, do the following to [`src/config.mjs`](src/config.mjs):
 
-- [Qwind](https://qwind.pages.dev/) - A template to make your website using Qwik + Tailwind CSS.
+```js
+origin: 'https://astro-demo.birki.io', // Change this to your custom domain name make sure it points to your GitHub Pages domain
+basePathname: '/', // leave this as a single /
+```
 
-## Contributing
-
-If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
-That would be very useful for all of us and we would be happy to listen and take action.
+> Note: For some reason when setting up a custom domain name the `npm run preview` script does not work. Just use `npm run dev` instead I guess
 
 ## Acknowledgements
 
 Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
-
-## License
-
-**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
