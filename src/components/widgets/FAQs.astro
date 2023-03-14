@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import config from '~/config.mjs'
 
 interface Item {
   question: string;
@@ -21,6 +22,7 @@ const {
 } = Astro.props;
 ---
 
+{config.faqs.enabled && (
 <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
@@ -64,3 +66,4 @@ const {
     </div>
   </div>
 </div>
+)}

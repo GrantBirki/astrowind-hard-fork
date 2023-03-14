@@ -58,8 +58,12 @@ const CONFIG = {
 
   announcement: {
     enabled: true,
-    text: "This is an annoucement",
+    text: 'This is an <b>announcement</b>',
     type: "info"
+  },
+
+  faqs: {
+    enabled: true,
   }
 };
 
