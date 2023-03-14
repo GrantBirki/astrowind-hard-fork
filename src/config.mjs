@@ -55,8 +55,15 @@ const CONFIG = {
       disabled: false,
     },
   },
+
+  announcement: {
+    enabled: true,
+    text: "This is an annoucement",
+    type: "info"
+  }
 };
 
+export default CONFIG;
 export const SITE = { ...CONFIG, blog: undefined };
 export const BLOG = CONFIG.blog;
 export const DATE_FORMATTER = CONFIG.dateFormatter;

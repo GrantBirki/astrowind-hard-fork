@@ -1,7 +1,0 @@
-{
-    "announcement": {
-        "enabled": true,
-        "text": "This is an annoucement",
-        "type": "info"
-    }
-}
