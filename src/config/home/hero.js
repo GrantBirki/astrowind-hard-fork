@@ -1,6 +1,27 @@
 // Hero configuration on the homepage
 
 const hero = {
+  // If the entire hero section should be enabled or not
+  enabled: true,
+
+  // Hero title with HTML support
+  title: {
+    enabled: true, // If the title should be enabled or not
+    text: `Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden" /> with</span>
+    <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS + GitHub Pages`,
+  },
+
+  // Hero subtitle with HTML support
+  subtitle: {
+    enabled: true, // If the subtitle should be enabled or not
+    text: `<span class="hidden sm:inline">
+    <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0
+    + Tailwind CSS.</span
+    >
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
+    Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.`,
+  },
+
   // First CTA block
   callToAction: {
     // CTA text

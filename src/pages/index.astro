@@ -27,33 +27,27 @@ const meta = {
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    callToAction={{
-      text: hero.callToAction.text,
-      href: hero.callToAction.href,
-      icon: hero.callToAction.icon,
-    }}
-    callToAction2={{
-      text: hero.callToAction2.text,
-      href: hero.callToAction2.href,
-      enabled: hero.callToAction2.enabled,
-    }}
-    image={{ src: hero.image.src, alt: hero.image.alt }}
-  >
-    <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden" /> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS + GitHub Pages
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0
-        + Tailwind CSS.</span
+  {
+    hero.enabled && (
+      <Hero
+        callToAction={{
+          text: hero.callToAction.text,
+          href: hero.callToAction.href,
+          icon: hero.callToAction.icon,
+        }}
+        callToAction2={{
+          text: hero.callToAction2.text,
+          href: hero.callToAction2.href,
+          enabled: hero.callToAction2.enabled,
+        }}
+        image={{ src: hero.image.src, alt: hero.image.alt }}
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
-    </Fragment>
-  </Hero>
+        {hero.title.enabled && <Fragment slot="title" set:html={hero.title.text} />}
+
+        {hero.subtitle.enabled && <Fragment slot="subtitle" set:html={hero.subtitle.text} />}
+      </Hero>
+    )
+  }
 
   <!-- Note Widget ******************* -->
 
