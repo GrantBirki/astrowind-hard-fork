@@ -264,11 +264,15 @@ const meta = {
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <LatestPosts
-    title={latestBlogPosts.title}
-    information={latestBlogPosts.information}
-    postIds={latestBlogPosts.postIds}
-  />
+  {
+    latestBlogPosts.enabled && (
+      <LatestPosts
+        title={latestBlogPosts.title}
+        information={latestBlogPosts.information}
+        postIds={latestBlogPosts.postIds}
+      />
+    )
+  }
 
   <!-- FAQs Widget ******************* -->
 
