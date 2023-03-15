@@ -13,6 +13,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import latestBlogPosts from '~/config/latest-blog-posts';
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -263,17 +265,9 @@ const meta = {
   <!-- HighlightedPosts Widget ******* -->
 
   <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
-		`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
+    title={latestBlogPosts.title}
+    information={latestBlogPosts.information}
+    postIds={latestBlogPosts.postIds}
   />
 
   <!-- FAQs Widget ******************* -->
