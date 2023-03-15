@@ -1,22 +1,35 @@
 import defaultImage from '../assets/images/default.png';
 
 const CONFIG = {
+  // The name of the website
   name: 'AstroWind',
-
+  // The origin of the website (without trailing slash)
   origin: 'https://astro-demo.birki.io',
+  // The base pathname of the website
   basePathname: '/',
+  // If the website uses trailing slashes in the URLs
   trailingSlash: false,
 
+  // The website title which is displayed in the browser tab
   title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS + GitHub Pages',
+
+  // Website description
   description:
     '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+  
+  // The website's preview image that is displayed when sharing the website on social media
   defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  // Default site theme
+  // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'system', 
 
+  // The default language of the website
   language: 'en',
+  // The default text direction (ltr is left-to-right, rtl is right-to-left)
   textDirection: 'ltr',
 
+  // Date format (used in blog posts)
   dateFormatter: new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'short',
