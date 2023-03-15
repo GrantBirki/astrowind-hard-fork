@@ -1,4 +1,4 @@
-import { DATE_FORMATTER } from '~/config/_config.js';
+import { DATE_FORMATTER } from '~/config/site/config.js';
 
 const formatter =
   DATE_FORMATTER ||

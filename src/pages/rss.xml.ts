@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
 
-import { SITE, BLOG } from '~/config/_config.js';
+import { SITE, BLOG } from '~/config/site/config.js';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 

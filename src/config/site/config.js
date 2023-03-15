@@ -1,7 +1,7 @@
 // General configuration for the website
 
-import defaultImage from '../assets/images/default.png';
-import blog from './blog';
+import defaultImage from '../../assets/images/default.png';
+import blog from '../blog';
 
 const CONFIG = {
   // The name of the website
