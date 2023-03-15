@@ -19,13 +19,13 @@ const CONFIG = {
   // Website description
   description:
     '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
-  
+
   // The website's preview image that is displayed when sharing the website on social media
   defaultImage: defaultImage,
 
   // Default site theme
   // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
-  defaultTheme: 'system', 
+  defaultTheme: 'system',
 
   // The default language of the website
   language: 'en',
@@ -47,12 +47,12 @@ const CONFIG = {
   announcement: {
     enabled: true,
     text: 'This is an <b>announcement</b>',
-    type: "info"
+    type: 'info',
   },
 
   faqs: {
     enabled: true,
-  }
+  },
 };
 
 export default CONFIG;

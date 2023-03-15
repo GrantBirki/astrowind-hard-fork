@@ -1,5 +1,5 @@
 import { getPermalink, getAsset } from '~/utils/permalinks';
-  
+
 const footerData = {
   links: [
     {
