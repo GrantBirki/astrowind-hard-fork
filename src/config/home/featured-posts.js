@@ -1,6 +1,6 @@
 // Configuration for the latest blog posts component on the homepage
 
-const latestBlogPosts = {
+const featuredPosts = {
   // Whether the component is enabled or not
   enabled: true,
 
@@ -23,4 +23,4 @@ const latestBlogPosts = {
   ],
 };
 
-export default latestBlogPosts;
+export default featuredPosts;
