@@ -6,13 +6,14 @@ interface CallToAction {
   text: string;
   href: string;
   icon?: string;
+  enabled?: boolean;
 }
 
 export interface Props {
   title?: string;
   subtitle?: string;
   callToAction?: string | CallToAction;
-  callToAction2?: string | CallToAction;
+  callToAction2?: any | CallToAction;
   image?: string | any; // TODO: find HTMLElementProps
 }
 
@@ -62,7 +63,7 @@ const {
               )
             }
             {
-              callToAction2 && (
+              callToAction2 && callToAction2.enabled === true && (
                 <div class="flex w-full sm:w-auto">
                   {typeof callToAction2 === 'string' ? (
                     <Fragment set:html={callToAction2} />

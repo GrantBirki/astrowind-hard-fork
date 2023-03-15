@@ -15,6 +15,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import latestBlogPosts from '~/config/latest-blog-posts';
 import steps from '~/config/steps';
+import hero from '~/config/hero';
 
 const meta = {
   title: SITE.title,
@@ -28,12 +29,16 @@ const meta = {
 
   <Hero
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: hero.callToAction.text,
+      href: hero.callToAction.href,
+      icon: hero.callToAction.icon,
     }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction2={{
+      text: hero.callToAction2.text,
+      href: hero.callToAction2.href,
+      enabled: hero.callToAction2.enabled,
+    }}
+    image={{ src: hero.image.src, alt: hero.image.alt }}
   >
     <Fragment slot="title">
       Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden" /> with</span>
