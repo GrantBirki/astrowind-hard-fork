@@ -43,10 +43,6 @@ const CONFIG = {
   // Google Analytics configuration
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: '',
-
-  faqs: {
-    enabled: true,
-  },
 };
 
 export default CONFIG;
