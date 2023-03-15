@@ -1,29 +1,29 @@
 ---
-import config from '~/config/site/config.js';
+import announcement from '~/config/components/announcement';
 ---
 
 <!-- if info set -->{
-  config.announcement.enabled && config.announcement.type === 'info' && (
+  announcement.enabled && announcement.type === 'info' && (
     <div class="hidden md:block bg-blue-900 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-blue-900 text-sm px-3 py-2 text-gray-200 overflow-hidden whitespace-nowrap text-ellipsis">
-      <Fragment set:html={config.announcement.text} />
+      <Fragment set:html={announcement.text} />
     </div>
   )
 }
 
 <!-- if warn set -->
 {
-  config.announcement.enabled && config.announcement.type === 'warn' && (
+  announcement.enabled && announcement.type === 'warn' && (
     <div class="hidden md:block bg-yellow-900 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-yellow-900 text-sm px-3 py-2 text-gray-200 overflow-hidden whitespace-nowrap text-ellipsis">
-      <Fragment set:html={config.announcement.text} />
+      <Fragment set:html={announcement.text} />
     </div>
   )
 }
 
 <!-- if error set -->
 {
-  config.announcement.enabled && config.announcement.type === 'error' && (
+  announcement.enabled && announcement.type === 'error' && (
     <div class="hidden md:block bg-red-900 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-red-900 text-sm px-3 py-2 text-gray-200 overflow-hidden whitespace-nowrap text-ellipsis">
-      <Fragment set:html={config.announcement.text} />
+      <Fragment set:html={announcement.text} />
     </div>
   )
 }

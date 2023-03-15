@@ -44,12 +44,6 @@ const CONFIG = {
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: '',
 
-  announcement: {
-    enabled: true,
-    text: 'This is an <b>announcement</b>',
-    type: 'info',
-  },
-
   faqs: {
     enabled: true,
   },
