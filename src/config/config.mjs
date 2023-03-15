@@ -1,4 +1,7 @@
+// General configuration for the website
+
 import defaultImage from '../assets/images/default.png';
+import blog from './blog';
 
 const CONFIG = {
   // The name of the website
@@ -37,37 +40,9 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
+  // Google Analytics configuration
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: '',
-
-  blog: {
-    disabled: false,
-    postsPerPage: 4,
-
-    post: {
-      permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      noindex: false,
-      disabled: false,
-    },
-
-    list: {
-      pathname: 'blog', // Blog main path, you can change this to "articles" (/articles)
-      noindex: false,
-      disabled: false,
-    },
-
-    category: {
-      pathname: 'category', // Category main path /category/some-category
-      noindex: true,
-      disabled: false,
-    },
-
-    tag: {
-      pathname: 'tag', // Tag main path /tag/some-tag
-      noindex: true,
-      disabled: false,
-    },
-  },
 
   announcement: {
     enabled: true,
@@ -82,5 +57,5 @@ const CONFIG = {
 
 export default CONFIG;
 export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
+export const BLOG = blog;
 export const DATE_FORMATTER = CONFIG.dateFormatter;
