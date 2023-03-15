@@ -11,7 +11,7 @@ import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
-import { SITE } from './src/config/config.js';
+import { SITE } from './src/config/_config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
