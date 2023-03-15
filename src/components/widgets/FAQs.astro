@@ -53,7 +53,7 @@ const {
                   <div>
                     <h3 class="mb-4 text-xl font-bold">
                       <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary inline-block" />
-                      {question}
+                      <Fragment set:html={question}/>
                     </h3>
                     {answer && <div class="text-muted dark:text-gray-400" set:html={answer} />}
                   </div>
