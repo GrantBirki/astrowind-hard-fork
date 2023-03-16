@@ -4,13 +4,34 @@ This is a custom AstroWind template for deployment to GitHub pages
 
 The original AstroWind template can be found here: [source](https://github.com/onwidget/astrowind)
 
-## Getting started
+## Features
 
-**AstroWind** tries to give you quick access to creating a website using [Astro 2.0](https://astro.build/blog/astro-2/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme focuses on simplicity, good practices and high performance.
+> How is this template fork different?
 
-Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals..
+This fork is designed for those who are not extremely familiar with Astro, or even web development in general. It is designed to be a simple, easy to use template for those who want to get started with Astro, but don't want to spend hours configuring the template.
 
-### Project structure
+This fork is also designed to be deployed to GitHub pages, which is a free and easy way to host your website.
+
+## Config Files
+
+The core way this template is different from the original is that it heavily uses `.js` config files to configure data and content for its site.
+
+Here are a few common config directories and what you will find there:
+
+- [`src/config/site/*`](src/config/site) - Site configuration
+  - [`config.js`](src/config/site/config.js) - Global site configuration
+  - [`blog.js`](src/config/site/blog.js) - Blog configuration
+- [`src/config/home/*`](src/config/home) - Home page configuration
+  - [`featured-posts.js`](src/config/home/featured-posts.js) - Featured blog posts on the home page
+  - [`hero.js`](src/config/home/hero.js) - Hero component configuration on the home page
+  - [`content.js`](src/config/home/content.js) - Main content component configuration on the home page
+- [`src/config/components/*`](src/config/components) - Component configuration
+  - [`announcement.js`](src/config/components/announcement.js) - Announcement component configuration on all pages
+  - [`footer.js`](src/config/components/footer.js) - Footer component configuration on all pages
+  - [`header.js`](src/config/components/header.js) - Header component configuration on all pages
+  - [`logo.js`](src/config/components/logo.js) - Logo (text) component configuration on all pages
+
+## Project structure
 
 Inside AstroWind template, you'll see the following folders and files:
 
@@ -32,6 +53,19 @@ Inside AstroWind template, you'll see the following folders and files:
 │   │   │   └── ...
 │   │   ├── CustomStyles.astro
 │   │   └── Logo.astro
+│   ├── config/
+│   │   ├── components/
+|   |   |   ├── announcement.js
+|   |   |   ├── call-to-action.js
+│   │   │   └── ...
+│   │   ├── home/
+|   |   |   ├── content.js
+|   |   |   ├── faqs.js
+│   │   │   └── ...
+│   │   ├── site/
+│   │   │   ├── blog.js
+|   |   |   ├── config.js
+│   │   │   └── ...
 │   ├── content/
 │   │   ├── post/
 │   │   │   ├── post-slug-1.md
@@ -48,6 +82,7 @@ Inside AstroWind template, you'll see the following folders and files:
 │   │   │   ├── [...page].astro
 │   │   │   └── index.astro
 │   │   ├── index.astro
+│   │   ├── about.md
 │   │   ├── 404.astro
 │   │   ├-- rss.xml.ts
 │   │   └── ...
@@ -83,103 +118,20 @@ All commands are run from the root of the project, from a terminal:
 
 Basic configuration file: `./src/config.mjs`
 
-```javascript
-const CONFIG = {
-  name: 'Example',
-
-  origin: 'https://example.com',
-  basePathname: '/', // Change this if you need to deploy to Github Pages, for example
-  trailingSlash: false, // Generate permalinks with or without "/" at the end
-
-  title: 'Example - This is the homepage title of Example', // Default seo title
-  description: 'This is the homepage description of Example', // Default seo description
-  defaultImage: 'image.jpg', // Default seo image
-
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
-
-  language: 'en', // Default language
-  textDirection: 'ltr', // Default html text direction
-
-  dateFormatter: new Intl.DateTimeFormat('en', {
-    // Date format
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    timeZone: 'UTC',
-  }),
-
-  googleAnalyticsId: false, // Or "G-XXXXXXXXXX",
-  googleSiteVerificationId: false, // Or some value,
-
-  blog: {
-    disabled: false,
-    postsPerPage: 4,
-
-    post: {
-      permalink: '/%slug%', // variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      noindex: false,
-      disabled: false,
-    },
-
-    list: {
-      pathname: 'blog', // Blog main path, you can change this to "articles" (/articles)
-      noindex: false,
-      disabled: false,
-    },
-
-    category: {
-      pathname: 'category', // Category main path /category/some-category
-      noindex: true,
-      disabled: false,
-    },
-
-    tag: {
-      pathname: 'tag', // Tag main path /tag/some-tag
-      noindex: true,
-      disabled: false,
-    },
-  },
-};
-```
-
 ### Deploy
 
-#### Deploy to production (manual)
-
-You can create an optimized production build with:
-
-```shell
-npm run build
-```
-
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
-
-#### Deploy to Netlify
-
-Clone this repository on own GitHub account and deploy to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/astrowind)
-
-#### Deploy to Vercel
-
-Clone this repository on own GitHub account and deploy to Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
-
-#### Deploy to GitHub Pages
+> Deployment docs for GitHub Pages
 
 First, clone this repository on own GitHub account
 
-If you want to deploy to a basic GitHub domain name, do the following to [`src/config.mjs`](src/config.mjs):
+If you want to deploy to a basic GitHub domain name, do the following to [`src/config/site/config.js`](src/config/site/config.js):
 
 ```js
 origin: 'https://grantbirki.github.io', // Change this to your GitHub username
 basePathname: '/astrowind', // Change this to your repository name
 ```
 
-If you want to use your own custom domain name, do the following to [`src/config.mjs`](src/config.mjs):
+If you want to use your own custom domain name, do the following to [`src/config/site/config.js`](src/config/site/config.js):
 
 ```js
 origin: 'https://astro-demo.birki.io', // Change this to your custom domain name make sure it points to your GitHub Pages domain
@@ -188,6 +140,8 @@ basePathname: '/', // leave this as a single /
 
 > Note: For some reason when setting up a custom domain name the `npm run preview` script does not work. Just use `npm run dev` instead I guess
 
+Ensure you have configured GitHub Pages to use the GitHub Actions deployment option. When you `push` changes to your repository, GitHub will automatically build and deploy your site.
+
 ## Acknowledgements
 
-Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+This theme is based off the template by [onwidget](https://github.com/onwidget/astrowind)
