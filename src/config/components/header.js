@@ -32,7 +32,7 @@ const headerData = {
         },
         {
           text: 'About us',
-          href: '#',
+          href: getPermalink('/about'),
         },
         {
           text: 'Contact',
