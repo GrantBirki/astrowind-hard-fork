@@ -31,6 +31,12 @@ Here are a few common config directories and what you will find there:
   - [`header.js`](src/config/components/header.js) - Header component configuration on all pages
   - [`logo.js`](src/config/components/logo.js) - Logo (text) component configuration on all pages
 
+## Usage
+
+Commit Examples:
+
+- [Adding a new page](https://github.com/GrantBirki/astrowind/commit/6836c11a3140181a65f252e3709e398f67e632c4)
+
 ## Project structure
 
 Inside AstroWind template, you'll see the following folders and files:
