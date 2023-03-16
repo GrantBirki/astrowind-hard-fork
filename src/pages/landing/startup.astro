@@ -7,6 +7,8 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 import headerData from '~/config/components/header';
 
+import config from '~/config/site/config';
+
 const meta = {
   title: 'Startup Landing Page',
 };
@@ -14,7 +16,12 @@ const meta = {
 
 <Layout {meta}>
   <Fragment slot="header">
-    <Header {...headerData} showRssFeed showToggleTheme position="left" />
+    <Header
+      {...headerData}
+      showRssFeed={config.showRssFeed}
+      showToggleTheme={config.showToggleTheme}
+      position={config.headerPosition}
+    />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -57,7 +64,7 @@ const meta = {
       text: 'Get template',
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:download',
-      enabled: true
+      enabled: true,
     }}
   >
     <Fragment slot="title">

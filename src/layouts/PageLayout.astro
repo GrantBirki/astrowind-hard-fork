@@ -7,6 +7,8 @@ import Announcement from '~/components/widgets/Announcement.astro';
 import headerData from '~/config/components/header';
 import footerData from '~/config/components/footer';
 
+import config from '~/config/site/config';
+
 import { MetaSEO } from '~/types';
 
 export interface Props {
@@ -21,7 +23,13 @@ const { meta } = Astro.props;
     <Announcement />
   </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme position="right" />
+    <Header
+      {...headerData}
+      isSticky={config.isSticky}
+      showRssFeed={config.showRssFeed}
+      showToggleTheme={config.showToggleTheme}
+      position={config.headerPosition}
+    />
   </slot>
   <main>
     <slot />

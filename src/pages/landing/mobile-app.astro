@@ -5,6 +5,8 @@ import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import config from '~/config/site/config';
+
 const meta = {
   title: 'Mobile App Landing Page',
 };
@@ -27,6 +29,10 @@ const meta = {
           href: '#',
         },
       ]}
+      showRssFeed={config.showRssFeed}
+      showToggleTheme={config.showToggleTheme}
+      isSticky={config.isSticky}
+      position={config.headerPosition}
     />
   </Fragment>
 

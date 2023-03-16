@@ -43,6 +43,19 @@ const CONFIG = {
   // Google Analytics configuration
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
   googleSiteVerificationId: '',
+
+  // If the RSS feed button should be displayed
+  showRssFeed: false,
+
+  // If the theme switcher should be displayed
+  showToggleTheme: true,
+
+  // If the header should be stick to the top of the page
+  isSticky: true,
+
+  // The position of the header
+  // Values: "center" | "right" | "left"
+  headerPosition: 'right',
 };
 
 export default CONFIG;
