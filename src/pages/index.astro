@@ -18,6 +18,7 @@ import steps from '~/config/home/steps';
 import hero from '~/config/home/hero';
 import faqs from '~/config/home/faqs';
 import features from '~/config/home/features';
+import callToAction from '~/config/components/call-to-action';
 
 const meta = {
   title: SITE.title,
@@ -240,21 +241,19 @@ const meta = {
   />
 
   <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    }}
-  >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  {
+    callToAction.enabled && (
+      <CallToAction
+        callToAction={{
+          text: callToAction.button.text,
+          href: callToAction.button.href,
+          icon: callToAction.button.icon,
+          enabled: callToAction.button.enabled,
+        }}
+      >
+        <Fragment slot="title" set:html={callToAction.title} />
+        <Fragment slot="subtitle" set:html={callToAction.subtitle} />
+      </CallToAction>
+    )
+  }
 </Layout>
