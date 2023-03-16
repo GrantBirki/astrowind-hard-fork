@@ -19,6 +19,7 @@ import hero from '~/config/home/hero';
 import faqs from '~/config/home/faqs';
 import features from '~/config/home/features';
 import callToAction from '~/config/components/call-to-action';
+import stats from '~/config/home/stats';
 
 const meta = {
   title: SITE.title,
@@ -231,14 +232,7 @@ const meta = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
-    ]}
-  />
+  {stats.enabled && <Stats items={stats.items} />}
 
   <!-- CallToAction Widget *********** -->
   {
