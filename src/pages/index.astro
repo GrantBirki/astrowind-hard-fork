@@ -13,9 +13,10 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import hero from '~/config/home/hero';
+import content from '~/config/home/content';
 import latestBlogPosts from '~/config/home/featured-posts';
 import steps from '~/config/home/steps';
-import hero from '~/config/home/hero';
 import faqs from '~/config/home/faqs';
 import features from '~/config/home/features';
 import features2 from '~/config/home/features2';
@@ -72,69 +73,36 @@ const meta = {
   }
 
   <!-- Content Widget **************** -->
-
-  <Content
-    highlight="Inside template"
-    title="And what's inside? ..."
-    items={[
-      {
-        title: 'Per ei quaeque sensibus',
-        description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-        description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-        description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
-      },
-    ]}
-    image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
-    ]}
-    image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
-    }}
-  />
+  {
+    content.enabled && (
+      <>
+        <Content
+          highlight={content.primary.highlight}
+          title={content.primary.title}
+          items={content.primary.items}
+          image={{
+            src: content.primary.image.src,
+            alt: content.primary.image.alt,
+            enabled: content.primary.image.enabled,
+          }}
+        >
+          <Fragment slot="content" set:html={content.primary.description} />
+        </Content>
+        {content.secondary.enabled && (
+          <Content
+            isReversed
+            isAfterContent
+            items={content.secondary.items}
+            image={{
+              src: content.secondary.image.src,
+              alt: content.secondary.image.alt,
+              enabled: content.secondary.image.enabled,
+            }}
+          />
+        )}
+      </>
+    )
+  }
 
   <!-- Steps Widget ****************** -->
 

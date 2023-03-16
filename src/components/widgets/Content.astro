@@ -83,7 +83,7 @@ const {
       </div>
       <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
         {
-          image && (
+          image && image.enabled && (
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
