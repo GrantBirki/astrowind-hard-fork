@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/system';
 
-export default function Location(props) {
+export default function Locations(props) {
   return (
     <section class="scroll-mt-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
