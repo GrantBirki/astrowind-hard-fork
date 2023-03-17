@@ -31,12 +31,6 @@ Here are a few common config directories and what you will find there:
   - [`header.js`](src/config/components/header.js) - Header component configuration on all pages
   - [`logo.js`](src/config/components/logo.js) - Logo (text) component configuration on all pages
 
-## Usage
-
-Commit Examples:
-
-- [Adding a new page](https://github.com/GrantBirki/astrowind/commit/6836c11a3140181a65f252e3709e398f67e632c4)
-
 ## Project structure
 
 Inside AstroWind template, you'll see the following folders and files:
@@ -120,9 +114,25 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint:eslint` | Run Eslint                                         |
 | `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
 
-### Configuration
+### Development
 
-Basic configuration file: `./src/config.mjs`
+Here are some basic commands to get you up and running to develop with this template:
+
+1. Install `npm` dependencies
+
+    ```bash
+    npm i
+    ```
+
+2. Start the development server
+
+    ```bash
+    npm run dev
+    ```
+
+3. View your site at [`localhost:3000`](http://localhost:3000/)
+
+> Live reload is enabled by default, so any changes you make will be reflected in the browser.
 
 ### Deploy
 
@@ -145,6 +155,16 @@ basePathname: '/', // leave this as a single /
 ```
 
 Ensure you have configured GitHub Pages to use the GitHub Actions deployment option. When you `push` changes to your repository, GitHub will automatically build and deploy your site.
+
+## Making Changes
+
+This section goes into details on how you can make changes to the template.
+
+## Live Commit Examples
+
+Actual examples in the form of commits to this repository:
+
+- [Adding a new page](https://github.com/GrantBirki/astrowind/commit/6836c11a3140181a65f252e3709e398f67e632c4)
 
 ## Acknowledgements
 
