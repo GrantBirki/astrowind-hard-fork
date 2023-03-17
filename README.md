@@ -122,15 +122,15 @@ Here are some basic commands to get you up and running to develop with this temp
 
 1. Install `npm` dependencies
 
-    ```bash
-    npm i
-    ```
+   ```bash
+   npm i
+   ```
 
 2. Start the development server
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 3. View your site at [`localhost:3000`](http://localhost:3000/)
 
