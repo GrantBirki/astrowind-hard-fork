@@ -4,6 +4,8 @@
 
 This is a custom AstroWind template for deployment to GitHub pages
 
+![example](docs/assets/example.png)
+
 The original AstroWind template can be found here: [source](https://github.com/onwidget/astrowind)
 
 ## Features
