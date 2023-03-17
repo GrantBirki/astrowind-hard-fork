@@ -43,7 +43,7 @@ module.exports = {
     {
       // Define the configuration for `<script>` tag.
       // Script in `<script>` is assigned a virtual file name with the `.js` extension.
-      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      files: ['**/*.astro/*.js', '*.astro/*.js', '**/*.jsx'],
       parser: '@typescript-eslint/parser',
     },
   ],
