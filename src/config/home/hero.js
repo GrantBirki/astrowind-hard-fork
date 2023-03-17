@@ -24,10 +24,16 @@ const hero = {
 
   // First CTA block
   callToAction: {
+    // Enable or disable first CTA
+    enabled: true,
     // CTA text
     text: 'Get template',
     // CTA link
     href: 'https://github.com/onwidget/astrowind',
+    // Target html <a> tag
+    target: '_blank',
+    // Rel html <a> tag
+    rel: 'noopener',
     // CTA icon
     icon: 'tabler:download',
   },
@@ -40,10 +46,17 @@ const hero = {
     text: 'Learn more',
     // CTA link
     href: '#features',
+    // Target html <a> tag
+    target: '_blank',
+    // Rel html <a> tag
+    rel: 'noopener',
+    icon: 'tabler:book',
   },
 
   // Hero image
   image: {
+    // If the image should be enabled or not
+    enabled: true,
     // Image source
     src: import('~/assets/images/hero.png'),
     // Image alt text

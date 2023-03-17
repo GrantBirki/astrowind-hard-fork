@@ -40,16 +40,22 @@ const meta = {
     hero && hero.enabled && (
       <Hero
         callToAction={{
+          enabled: hero.callToAction.enabled,
           text: hero.callToAction.text,
           href: hero.callToAction.href,
+          target: hero.callToAction.target,
+          rel: hero.callToAction.rel,
           icon: hero.callToAction.icon,
         }}
         callToAction2={{
+          enabled: hero.callToAction2.enabled,
           text: hero.callToAction2.text,
           href: hero.callToAction2.href,
-          enabled: hero.callToAction2.enabled,
+          target: hero.callToAction2.target,
+          rel: hero.callToAction2.rel,
+          icon: hero.callToAction2.icon,
         }}
-        image={{ src: hero.image.src, alt: hero.image.alt }}
+        image={{ enabled: hero.image.enabled, src: hero.image.src, alt: hero.image.alt }}
       >
         {hero.title.enabled && <Fragment slot="title" set:html={hero.title.text} />}
 
