@@ -18,7 +18,7 @@ export default function Location(props) {
             <Container maxWidth="lg" sx={{ display: 'flex' }}>
               {props.locations.map((location) => {
                 return (
-                  <Card sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
+                  <Card elevation={16} raised={true} sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
                     <CardMedia
                       component="img"
                       alt={location.image.alt}
