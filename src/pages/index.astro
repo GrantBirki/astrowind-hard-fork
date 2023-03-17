@@ -12,6 +12,7 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Block from '~/components/widgets/Block.astro';
 import Locations from '~/components/widgets/Locations.jsx';
 
 import hero from '~/config/home/hero';
@@ -149,6 +150,15 @@ const meta = {
   <!-- FAQs Widget ******************* -->
 
   {faqs.enabled && <FAQs title={faqs.title} subtitle={faqs.subtitle} highlight={faqs.highlight} items={faqs.items} />}
+
+  <!-- Block Widget ****************** -->
+
+  <Block
+    title={'Example Text Block'}
+    subtitle={'This is an example of a text block'}
+    highlight={'Block'}
+    text={'In a text block you can add any content you want. This could be a description about something, a quote, or other details.'}
+  />
 
   <!-- Stats Widget ****************** -->
 
