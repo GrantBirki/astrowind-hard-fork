@@ -100,7 +100,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
-### Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -114,7 +114,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint:eslint` | Run Eslint                                         |
 | `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
 
-### Development
+## Development
 
 Here are some basic commands to get you up and running to develop with this template:
 
@@ -134,7 +134,7 @@ Here are some basic commands to get you up and running to develop with this temp
 
 > Live reload is enabled by default, so any changes you make will be reflected in the browser.
 
-### Deploy
+## Deployment
 
 > Deployment docs for GitHub Pages
 
@@ -155,6 +155,12 @@ basePathname: '/', // leave this as a single /
 ```
 
 Ensure you have configured GitHub Pages to use the GitHub Actions deployment option. When you `push` changes to your repository, GitHub will automatically build and deploy your site.
+
+### Branch Deploy
+
+This template also comes bundled with the [branch-deploy](https://github.com/github/branch-deploy) Action. Please ensure you view the [`branch-deploy.yml`](.github/workflows/branch-deploy.yml) file and make any necessary changes if you wish to use it.
+
+The `branch-deploy` Action will allow you to trigger branch deployments from pull requests by using comments such as `.deploy`.
 
 ## Making Changes
 
