@@ -1,8 +1,18 @@
+// Configuration for the locations component on the home page
+
 const locations = {
+  // Show or hide the locations component
   enabled: true,
+
+  // Small highlight text at the top of the component
   highlight: 'Physical Locations',
+
+  // Main title text
   title: 'Locations',
+  // Subtitle text
   subtitle: 'Drop in and see us at one of our locations.',
+
+  // Location cards to display
   locations: [
     {
       name: 'Location 1',
