@@ -144,8 +144,6 @@ origin: 'https://astro-demo.birki.io', // Change this to your custom domain name
 basePathname: '/', // leave this as a single /
 ```
 
-> Note: For some reason when setting up a custom domain name the `npm run preview` script does not work. Just use `npm run dev` instead I guess
-
 Ensure you have configured GitHub Pages to use the GitHub Actions deployment option. When you `push` changes to your repository, GitHub will automatically build and deploy your site.
 
 ## Acknowledgements
