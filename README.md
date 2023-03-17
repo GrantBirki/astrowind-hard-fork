@@ -1,5 +1,7 @@
 # 🚀 AstroWind
 
+[![deploy](https://github.com/GrantBirki/astrowind/actions/workflows/deploy.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/deploy.yml) [![ci](https://github.com/GrantBirki/astrowind/actions/workflows/ci.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/ci.yml)
+
 This is a custom AstroWind template for deployment to GitHub pages
 
 The original AstroWind template can be found here: [source](https://github.com/onwidget/astrowind)
