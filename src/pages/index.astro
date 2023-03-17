@@ -37,7 +37,7 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   {
-    hero.enabled && (
+    hero && hero.enabled && (
       <Hero
         callToAction={{
           text: hero.callToAction.text,
@@ -65,7 +65,7 @@ const meta = {
   <!-- Features Widget *************** -->
 
   {
-    features.enabled && (
+    features && features.enabled && (
       <Features
         highlight={features.highlight}
         title={features.title}
@@ -77,7 +77,7 @@ const meta = {
 
   <!-- Content Widget **************** -->
   {
-    content.enabled && (
+    content && content.enabled && (
       <>
         <Content
           highlight={content.primary.highlight}
@@ -110,7 +110,7 @@ const meta = {
   <!-- Steps Widget ****************** -->
 
   {
-    steps.enabled && (
+    steps && steps.enabled && (
       <Steps
         title={steps.title}
         items={steps.items}
@@ -125,7 +125,7 @@ const meta = {
   <!-- Features2 Widget ************** -->
 
   {
-    features2.enabled && (
+    features2 && features2.enabled && (
       <Features2
         title={features2.title}
         subtitle={features2.subtitle}
@@ -138,7 +138,7 @@ const meta = {
   <!-- HighlightedPosts Widget ******* -->
 
   {
-    featuredPosts.enabled && (
+    featuredPosts && featuredPosts.enabled && (
       <LatestPosts
         title={featuredPosts.title}
         information={featuredPosts.information}
@@ -149,7 +149,7 @@ const meta = {
 
   <!-- FAQs Widget ******************* -->
 
-  {faqs.enabled && <FAQs title={faqs.title} subtitle={faqs.subtitle} highlight={faqs.highlight} items={faqs.items} />}
+  {faqs && faqs.enabled && <FAQs title={faqs.title} subtitle={faqs.subtitle} highlight={faqs.highlight} items={faqs.items} />}
 
   <!-- Block Widget ****************** -->
 
@@ -180,12 +180,12 @@ const meta = {
 
   <!-- Stats Widget ****************** -->
 
-  {stats.enabled && <Stats items={stats.items} />}
+  {stats && stats.enabled && <Stats items={stats.items} />}
 
   <!-- Locations Widget ****************** -->
 
   {
-    locations.enabled && locations.locations.length > 0 && (
+    locations && locations.enabled && locations.locations.length > 0 && (
       <Locations
         client:only="react"
         highlight="Physical Locations"
@@ -198,7 +198,7 @@ const meta = {
 
   <!-- CallToAction Widget *********** -->
   {
-    callToAction.enabled && (
+    callToAction && callToAction.enabled && (
       <CallToAction
         callToAction={{
           text: callToAction.button.text,
