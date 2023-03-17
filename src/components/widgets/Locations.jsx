@@ -14,8 +14,8 @@ export default function Locations(props) {
   }
 
   return (
-    <section class="scroll-mt-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 dark:bg-slate-800 bg-blue-50">
+    <section class="scroll-mt-16 dark:bg-slate-800 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="md:mx-auto text-center">
           <div class="py-12 md:py-20">
             {props.highlight && (
@@ -51,12 +51,25 @@ export default function Locations(props) {
                       image={location.image.src}
                     />
                     <CardContent>
-                      <h3 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
+                      <h3 class="text-5xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
                         {location.name}
                       </h3>
-                      <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">
-                        {location.description}
-                      </p>
+                      {location.description && (
+                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">
+                          {location.description}
+                        </p>
+                      )}
+                      {location.address.enabled && (
+                        <div class="py-2 max-w-3xl mx-auto sm:text-center text-l text-muted dark:text-slate-400">
+                          <p>Address:</p>
+                          <p>{location.address.line1}</p>
+                          <p>{location.address.line2}</p>
+                          <p>
+                            {location.address.city}, {location.address.state} {location.address.postcode}
+                          </p>
+                          <p>{location.address.country}</p>
+                        </div>
+                      )}
                     </CardContent>
                     <CardActions>
                       {location.buttons.map((button) => {

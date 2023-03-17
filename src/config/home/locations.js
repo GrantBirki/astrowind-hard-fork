@@ -16,7 +16,14 @@ const locations = {
   locations: [
     {
       name: 'Location 1',
-      address: 'Level 1, 1/2-4 Caxton Street, Milton, QLD 4064',
+      address: {
+        enabled: true,
+        line1: '123 Sesame Street',
+        city: 'Seattle',
+        state: 'WA',
+        postcode: '12345',
+        country: 'United States',
+      },
       description: 'Location 1 description',
       image: {
         alt: 'location 1',
@@ -34,7 +41,14 @@ const locations = {
     },
     {
       name: 'Location 2',
-      address: 'Level 1, 1/2-4 Caxton Street, Milton, QLD 4064',
+      address: {
+        enabled: true,
+        line1: '123 Sesame Street',
+        city: 'Seattle',
+        state: 'WA',
+        postcode: '12345',
+        country: 'United States',
+      },
       description: 'Location 2 description',
       image: {
         alt: 'location 2',
