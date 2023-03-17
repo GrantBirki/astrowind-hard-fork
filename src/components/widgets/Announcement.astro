@@ -12,7 +12,7 @@ import announcement from '~/config/components/announcement';
 
 <!-- if warn set -->
 {
-  announcement &&announcement.enabled && announcement.type === 'warn' && (
+  announcement && announcement.enabled && announcement.type === 'warn' && (
     <div class="hidden md:block bg-yellow-900 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-yellow-900 text-sm px-3 py-2 text-gray-200 overflow-hidden whitespace-nowrap text-ellipsis">
       <Fragment set:html={announcement.text} />
     </div>

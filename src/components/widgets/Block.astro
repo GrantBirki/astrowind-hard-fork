@@ -63,7 +63,7 @@ const {
             )}
             <div>
               {image && image.enabled && (
-                <div class="relative m-auto max-w-5xl mt-6">
+                <div class="relative m-auto max-w-5xl mt-6 mb-6">
                   {typeof image === 'string' ? (
                     <Fragment set:html={image} />
                   ) : (
@@ -84,7 +84,7 @@ const {
             <div class="max-w-3xl mx-auto">
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
                 {callToAction && callToAction.enabled && (
-                  <div class="mt-6 flex w-full sm:w-auto">
+                  <div class="sm:mt-0 md:mt-6 flex w-full sm:w-auto">
                     {typeof callToAction === 'string' ? (
                       <Fragment set:html={callToAction} />
                     ) : (
@@ -105,7 +105,7 @@ const {
                   </div>
                 )}
                 {callToAction2 && callToAction2.enabled === true && (
-                  <div class="mt-6 flex w-full sm:w-auto">
+                  <div class="sm:mt-0 md:mt-6 flex w-full sm:w-auto">
                     {typeof callToAction2 === 'string' ? (
                       <Fragment set:html={callToAction2} />
                     ) : (
