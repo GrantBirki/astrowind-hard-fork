@@ -29,7 +29,7 @@ const hero = {
     // CTA text
     text: 'Get template',
     // CTA link
-    href: 'https://github.com/onwidget/astrowind',
+    href: 'https://github.com/grantbirki/astrowind',
     // Target html <a> tag
     target: '_blank',
     // Rel html <a> tag
