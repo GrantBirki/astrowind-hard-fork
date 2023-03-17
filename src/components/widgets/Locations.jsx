@@ -38,7 +38,7 @@ export default function Locations(props) {
             <div class={gridCss}>
               {props.locations.map((location) => {
                 return (
-                  <Card elevation={16} raised={true} sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
+                  <Card className='dark:bg-slate-900' elevation={16} raised={true} sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
                     <CardMedia
                       component="img"
                       alt={location.image.alt}
@@ -46,7 +46,7 @@ export default function Locations(props) {
                       image={location.image.src}
                     />
                     <CardContent>
-                      <h3 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">{location.name}</h3>
+                      <h3 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">{location.name}</h3>
                       <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{location.description}</p>
                     </CardContent>
                     <CardActions>
