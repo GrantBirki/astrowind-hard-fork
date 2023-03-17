@@ -3,8 +3,10 @@ import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 
 interface CallToAction {
-  text: string;
-  href: string;
+  text?: string;
+  href?: string;
+  target?: string;
+  rel?: string;
   icon?: string;
   enabled?: boolean;
 }
@@ -91,8 +93,8 @@ const {
                       <a
                         class="btn btn-primary sm:mb-0 w-full"
                         href={callToAction?.href}
-                        target="_blank"
-                        rel="noopener"
+                        target={callToAction?.target}
+                        rel={callToAction?.rel}
                       >
                         {callToAction?.icon && (
                           <>
@@ -109,7 +111,12 @@ const {
                     {typeof callToAction2 === 'string' ? (
                       <Fragment set:html={callToAction2} />
                     ) : (
-                      <a class="btn w-full" href={callToAction2?.href}>
+                      <a
+                        class="btn w-full"
+                        href={callToAction2?.href}
+                        target={callToAction2?.target}
+                        rel={callToAction2?.rel}
+                      >
                         {callToAction2?.icon && (
                           <>
                             <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />
