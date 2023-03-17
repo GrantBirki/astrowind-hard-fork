@@ -34,7 +34,9 @@ export default function Locations(props) {
             )}
 
             {props.subtitle && (
-              <p className="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{props.subtitle}</p>
+              <p className="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">
+                {props.subtitle}
+              </p>
             )}
 
             {/* <screensize>:grid-cols-<columns> tailwind */}
@@ -46,6 +48,7 @@ export default function Locations(props) {
                     elevation={16}
                     raised={true}
                     sx={{ borderRadius: '0.5rem', margin: '2rem' }}
+                    key={location.name}
                   >
                     <CardMedia
                       component="img"
@@ -75,7 +78,7 @@ export default function Locations(props) {
                       )}
                     </CardContent>
                     <CardActions>
-                      {location.buttons.map((button) => {
+                      {location.buttons.map((button, index) => {
                         var icon = null;
                         if (button.icon === 'phone') {
                           icon = <PhoneIcon />;
@@ -86,7 +89,13 @@ export default function Locations(props) {
                         }
 
                         return (
-                          <Button startIcon={icon} size={button.size} target={button.target} href={button.link}>
+                          <Button
+                            key={index}
+                            startIcon={icon}
+                            size={button.size}
+                            target={button.target}
+                            href={button.link}
+                          >
                             {button.text}
                           </Button>
                         );
