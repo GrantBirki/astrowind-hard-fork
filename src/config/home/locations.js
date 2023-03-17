@@ -32,10 +32,18 @@ const locations = {
       },
       buttons: [
         {
-          text: 'View Location',
-          link: 'https://www.google.com',
+          text: 'Directions',
+          link: 'https://www.google.com', // google maps link
           target: '_blank', // opens in new tab
           size: 'large',
+          icon: 'directions',
+        },
+        {
+          text: 'Call',
+          link: 'tel:1234567890', // phone number
+          target: '_self', // opens in same tab
+          size: 'large',
+          icon: 'phone',
         },
       ],
     },
@@ -57,10 +65,18 @@ const locations = {
       },
       buttons: [
         {
-          text: 'View Location',
-          link: 'https://www.google.com',
+          text: 'Directions',
+          link: 'https://www.google.com', // google maps link
           target: '_blank', // opens in new tab
           size: 'large',
+          icon: 'directions',
+        },
+        {
+          text: 'Call',
+          link: 'tel:1234567890', // phone number
+          target: '_self', // opens in same tab
+          size: 'large',
+          icon: 'phone',
         },
       ],
     },

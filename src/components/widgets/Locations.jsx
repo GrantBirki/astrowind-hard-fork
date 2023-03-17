@@ -3,6 +3,9 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import DirectionsIcon from '@mui/icons-material/Directions';
 
 export default function Locations(props) {
   // Dynamically set the gridcss depending on how many items are in the locations list
@@ -73,8 +76,17 @@ export default function Locations(props) {
                     </CardContent>
                     <CardActions>
                       {location.buttons.map((button) => {
+                        var icon = null;
+                        if (button.icon === 'phone') {
+                          icon = <PhoneIcon />;
+                        } else if (button.icon === 'email') {
+                          icon = <EmailIcon />;
+                        } else if (button.icon === 'directions') {
+                          icon = <DirectionsIcon />;
+                        }
+
                         return (
-                          <Button size={button.size} target={button.target} href={button.link}>
+                          <Button startIcon={icon} size={button.size} target={button.target} href={button.link}>
                             {button.text}
                           </Button>
                         );
