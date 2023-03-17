@@ -31,5 +31,8 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      - name: lint
+      - name: format
         run: npm run format-ci
+      
+      - name: lint
+        run: npm run lint:eslint
