@@ -57,7 +57,20 @@ const headerData = {
       href: getBlogPermalink(),
     },
   ],
-  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
+  actions: [
+    {
+      // text to display on the button
+      text: 'Download',
+      // link to go to when the button is clicked
+      href: 'https://github.com/onwidget/astrowind',
+      // can be 'button', 'primary', or 'ghost'
+      type: 'button',
+      // HTML rel attribute
+      rel: 'noopener',
+      // HTML target attribute
+      target: '_blank',
+    },
+  ],
 };
 
 export default headerData;
