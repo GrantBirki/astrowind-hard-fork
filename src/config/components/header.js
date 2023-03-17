@@ -1,8 +1,14 @@
+// Configuration for the header component on all pages
+
+// ----------- imports -----------
 import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
+// ----------- imports -----------
 
 const headerData = {
+  // List of links to be displayed in the header
   links: [
     {
+      // The text to be diplayed on the dropdown where there are multiple links
       text: 'Landing',
       links: [
         {
@@ -48,15 +54,21 @@ const headerData = {
         },
       ],
     },
+
+    // A single link with no dropdown
     {
       text: 'Widgets',
       href: '#',
     },
+
+    // The blog link is a special case, it uses the getBlogPermalink function
     {
       text: 'Blog',
       href: getBlogPermalink(),
     },
   ],
+
+  // List of buttons to be displayed in the header
   actions: [
     {
       // text to display on the button
