@@ -17,28 +17,28 @@ export default function Locations(props) {
   }
 
   return (
-    <section class="scroll-mt-16 dark:bg-slate-800 bg-blue-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="md:mx-auto text-center">
-          <div class="py-12 md:py-20">
+    <section className="scroll-mt-16 dark:bg-slate-800 bg-blue-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="md:mx-auto text-center">
+          <div className="py-12 md:py-20">
             {props.highlight && (
-              <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
+              <p className="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
                 {props.highlight}
               </p>
             )}
 
             {props.title && (
-              <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
                 {props.title}
               </h2>
             )}
 
             {props.subtitle && (
-              <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{props.subtitle}</p>
+              <p className="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{props.subtitle}</p>
             )}
 
             {/* <screensize>:grid-cols-<columns> tailwind */}
-            <div class={gridCss}>
+            <div className={gridCss}>
               {props.locations.map((location) => {
                 return (
                   <Card
@@ -54,16 +54,16 @@ export default function Locations(props) {
                       image={location.image.src}
                     />
                     <CardContent>
-                      <h3 class="sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
+                      <h3 className="sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
                         {location.name}
                       </h3>
                       {location.description && (
-                        <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">
+                        <p className="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">
                           {location.description}
                         </p>
                       )}
                       {location.address.enabled && (
-                        <div class="py-2 max-w-3xl mx-auto sm:text-center text-l text-muted dark:text-slate-400">
+                        <div className="py-2 max-w-3xl mx-auto sm:text-center text-l text-muted dark:text-slate-400">
                           <p>Address:</p>
                           <p>{location.address.line1}</p>
                           <p>{location.address.line2}</p>
