@@ -12,9 +12,22 @@ export default function Locations(props) {
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="md:mx-auto text-center">
           <div class="py-12 md:py-20">
-            <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-              {props.title}
-            </h2>
+            {props.highlight && (
+              <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
+                {props.highlight}
+              </p>
+            )}
+
+            {props.title && (
+              <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+                {props.title}
+              </h2>
+            )}
+
+            {props.subtitle && (
+              <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{props.subtitle}</p>
+            )}
+
             <Container maxWidth="lg" sx={{ display: 'flex' }}>
               {props.locations.map((location) => {
                 return (
@@ -36,9 +49,11 @@ export default function Locations(props) {
                     <CardActions>
                       {location.buttons.map((button) => {
                         return (
-                          <Button size={button.size} target={button.target} href={button.link}>{button.text}</Button>
-                        )}
-                      )}
+                          <Button size={button.size} target={button.target} href={button.link}>
+                            {button.text}
+                          </Button>
+                        );
+                      })}
                     </CardActions>
                   </Card>
                 );
