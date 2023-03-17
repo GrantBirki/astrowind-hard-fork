@@ -60,7 +60,20 @@ const meta = {
 
   <Note />
 
-  <Location client:only="react" />
+  <Location
+    client:only="react"
+    title="Locations"
+    locations={[
+      {
+        name: 'Brisbane',
+        address: 'Level 1, 1/2-4 Caxton Street, Milton, QLD 4064',
+      },
+      {
+        name: 'Gold Coast',
+        address: 'Level 1, 1/2-4 Caxton Street, Milton, QLD 4064',
+      },
+    ]}
+  />
 
   <!-- Features Widget *************** -->
 
