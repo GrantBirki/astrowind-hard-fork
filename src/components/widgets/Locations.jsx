@@ -54,7 +54,7 @@ export default function Locations(props) {
                       image={location.image.src}
                     />
                     <CardContent>
-                      <h3 class="text-5xl md:text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
+                      <h3 class="sm:text-3xl md:text-3xl lg:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
                         {location.name}
                       </h3>
                       {location.description && (
