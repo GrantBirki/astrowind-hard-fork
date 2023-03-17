@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
+    "format-ci": "prettier --check .",
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "devDependencies": {
