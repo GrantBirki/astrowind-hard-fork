@@ -21,22 +21,24 @@ export default function Location(props) {
                   <Card sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
                     <CardMedia
                       component="img"
-                      alt="green iguana"
-                      height="140"
-                      image="https://images.unsplash.com/photo-1678986992005-87c3f4a2b0af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=60"
+                      alt={location.image.alt}
+                      height={location.image.height}
+                      image={location.image.src}
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
                         {location.name}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all
-                        continents except Antarctica
+                        {location.description}
                       </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button size="small">Share</Button>
-                      <Button size="small">Learn More</Button>
+                      {location.buttons.map((button) => {
+                        return (
+                          <Button size="small" target={button.target} href={button.link}>{button.text}</Button>
+                        )}
+                      )}
                     </CardActions>
                   </Card>
                 );
