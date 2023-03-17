@@ -14,7 +14,7 @@ export interface Props {
   subtitle?: any;
   highlight?: any;
   content?: any;
-  callToAction?: string | CallToAction;
+  callToAction?: any | CallToAction;
   callToAction2?: any | CallToAction;
   image?: string | any; // TODO: find HTMLElementProps
 }
@@ -59,7 +59,7 @@ const {
             <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={content} />
           )}
           <div>
-            {image && (
+            {image.enabled && (
               <div class="relative m-auto max-w-5xl">
                 {typeof image === 'string' ? (
                   <Fragment set:html={image} />
@@ -80,7 +80,7 @@ const {
           </div>
           <div class="max-w-3xl mx-auto">
             <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-              {callToAction && (
+              {callToAction.enabled && (
                 <div class="flex w-full sm:w-auto">
                   {typeof callToAction === 'string' ? (
                     <Fragment set:html={callToAction} />
@@ -104,7 +104,7 @@ const {
                     <a class="btn w-full" href={callToAction2?.href}>
                       {callToAction2?.icon && (
                         <>
-                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />{' '}
+                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />
                         </>
                       )}
                       {callToAction2.text}
