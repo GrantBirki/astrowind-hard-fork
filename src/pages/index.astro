@@ -16,7 +16,7 @@ import Locations from '~/components/widgets/Locations.jsx';
 
 import hero from '~/config/home/hero';
 import content from '~/config/home/content';
-import latestBlogPosts from '~/config/home/featured-posts';
+import featuredPosts from '~/config/home/featured-posts';
 import steps from '~/config/home/steps';
 import faqs from '~/config/home/faqs';
 import features from '~/config/home/features';
@@ -181,11 +181,11 @@ const meta = {
   <!-- HighlightedPosts Widget ******* -->
 
   {
-    latestBlogPosts.enabled && (
+    featuredPosts.enabled && (
       <LatestPosts
-        title={latestBlogPosts.title}
-        information={latestBlogPosts.information}
-        postIds={latestBlogPosts.postIds}
+        title={featuredPosts.title}
+        information={featuredPosts.information}
+        postIds={featuredPosts.postIds}
       />
     )
   }
