@@ -22,6 +22,10 @@ const callToAction = {
     href: 'https://github.com/onwidget/astrowind',
     // The icon to the left of the button text
     icon: 'tabler:download',
+    // HTML target attribute
+    target: '_blank',
+    // HTML rel attribute
+    rel: 'noopener',
   },
 };
 

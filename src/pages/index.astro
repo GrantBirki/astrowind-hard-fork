@@ -215,10 +215,12 @@ const meta = {
     callToAction && callToAction.enabled && (
       <CallToAction
         callToAction={{
+          enabled: callToAction.button.enabled,
           text: callToAction.button.text,
           href: callToAction.button.href,
           icon: callToAction.button.icon,
-          enabled: callToAction.button.enabled,
+          rel: callToAction.button.rel,
+          target: callToAction.button.target,
         }}
       >
         <Fragment slot="title" set:html={callToAction.title} />
