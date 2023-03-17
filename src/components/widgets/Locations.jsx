@@ -4,9 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/system';
 
 export default function Locations(props) {
+  // Dynamically set the gridcss depending on how many items are in the locations list
+  var gridCss = 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+  if (props.locations.length === 1) {
+    gridCss = 'grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1';
+  } else if (props.locations.length === 2) {
+    gridCss = 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2';
+  }
+
   return (
     <section class="scroll-mt-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -28,7 +35,8 @@ export default function Locations(props) {
               <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400">{props.subtitle}</p>
             )}
 
-            <Container maxWidth="lg" sx={{ display: 'flex' }}>
+            {/* <screensize>:grid-cols-<columns> tailwind */}
+            <div class={gridCss}>
               {props.locations.map((location) => {
                 return (
                   <Card elevation={16} raised={true} sx={{ borderRadius: '0.5rem', margin: '2rem' }}>
@@ -58,7 +66,7 @@ export default function Locations(props) {
                   </Card>
                 );
               })}
-            </Container>
+            </div>
           </div>
         </div>
       </div>
