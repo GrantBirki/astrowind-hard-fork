@@ -59,6 +59,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # pin@v3.3.0
+        with:
+          ref: ${{ needs.trigger.outputs.ref }}
 
       - name: build with astro
         uses: withastro/action@dc081df9eacdb11181ea51e5d05853faa5aee891 # pin@v0.2.0
