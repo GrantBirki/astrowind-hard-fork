@@ -154,10 +154,16 @@ const meta = {
   <!-- Block Widget ****************** -->
 
   <Block
+    enabled={true}
     title={'Example Text Block'}
     subtitle={'This is an example of a text block'}
     highlight={'Block'}
-    content={'In a text block you can add any content you want. This could be a description about something, a quote, or other details.'}
+    content={'In a text block you can add any content you want. This could be a description about something, a quote, or other details. With this component you can optionally add an image and call to action buttons.'}
+    image={{
+      enabled: true,
+      src: import('~/assets/images/hero.png'),
+      alt: 'alt text here',
+    }}
     callToAction={{
       enabled: true,
       text: 'Button 1',
@@ -169,11 +175,6 @@ const meta = {
       text: 'Button 2',
       href: 'https://www.google.com',
       icon: 'tabler:star',
-    }}
-    image={{
-      enabled: true,
-      src: import('~/assets/images/hero.png'),
-      alt: 'alt text here',
     }}
   />
 
