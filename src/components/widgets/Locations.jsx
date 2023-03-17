@@ -36,7 +36,7 @@ export default function Locations(props) {
                     <CardActions>
                       {location.buttons.map((button) => {
                         return (
-                          <Button size="small" target={button.target} href={button.link}>{button.text}</Button>
+                          <Button size={button.size} target={button.target} href={button.link}>{button.text}</Button>
                         )}
                       )}
                     </CardActions>
