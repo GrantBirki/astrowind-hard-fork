@@ -12,6 +12,7 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import SimpleMap from '~/components/widgets/SimpleMap.jsx';
 
 import hero from '~/config/home/hero';
 import content from '~/config/home/content';
@@ -58,6 +59,8 @@ const meta = {
   <!-- Note Widget ******************* -->
 
   <Note />
+
+  <SimpleMap client:only="react"/>
 
   <!-- Features Widget *************** -->
 
