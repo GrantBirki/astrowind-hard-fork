@@ -19,7 +19,7 @@ const callToAction = {
     // The text of the button
     text: 'Get template',
     // The link of the button
-    href: 'https://github.com/onwidget/astrowind',
+    href: 'https://github.com/grantbirki/astrowind',
     // The icon to the left of the button text
     icon: 'tabler:download',
     // HTML target attribute
