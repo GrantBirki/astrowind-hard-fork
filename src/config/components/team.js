@@ -15,6 +15,8 @@ const team = {
     {
       // The name of the first member
       name: 'Neil Sims',
+      // Clickable link of the first member name
+      nameLink: '#',
       // The job title of the first member
       title: 'Vue.js Developer',
       // The avatar of the first member
@@ -31,6 +33,7 @@ const team = {
     },
     {
       name: 'Bonnie Green',
+      nameLink: null,
       title: 'CEO',
       avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png',
       social: {
@@ -44,6 +47,7 @@ const team = {
     },
     {
       name: 'Jese Leos',
+      nameLink: null,
       title: 'UI/UX Designer',
       // avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png',
       social: {
@@ -57,6 +61,7 @@ const team = {
     },
     {
       name: 'Michael Gough',
+      nameLink: null,
       title: 'Frontend Developer',
       avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png',
       social: {
