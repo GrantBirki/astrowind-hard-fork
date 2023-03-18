@@ -4,6 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Team from '~/components/widgets/Team.jsx';
 import team from '~/config/components/team';
 
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title404 = `Error 404`;
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -12,27 +16,55 @@ const meta = {
 
 var teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
 
-if (team.members.length === 1) {
-  teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1';
-} else if (team.members.length === 2) {
-  teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2';
-} else if (team.members.length === 3) {
-  teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3';
+if (team?.enabled === true) {
+  if (team.members.length === 1) {
+    teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1';
+  } else if (team.members.length === 2) {
+    teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2';
+  } else if (team.members.length === 3) {
+    teamColCss = 'grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3';
+  }
 }
 ---
 
-<Layout {meta}>
-  <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{team.title}</h2>
-        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-          {team.description}
-        </p>
-      </div>
-      <div class={teamColCss}>
-        <Team members={team.members} />
-      </div>
-    </div>
-  </section>
-</Layout>
+{
+  team?.enabled && (
+    <Layout {meta}>
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+          <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{team.title}</h2>
+            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">{team.description}</p>
+          </div>
+          <div class={teamColCss}>
+            <Team members={team.members} />
+          </div>
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+{
+  !team?.enabled && (
+    <Layout meta={{ title404 }}>
+      <section class="flex items-center h-full p-16">
+        <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+          <div class="max-w-md text-center">
+            <h2 class="mb-8 font-bold text-9xl">
+              <span class="sr-only">Error</span>
+              <span class="text-primary">404</span>
+            </h2>
+            <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+            <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+              But dont worry, you can find plenty of other things on our homepage.
+            </p>
+            <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">
+              Back to homepage
+            </a>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  )
+}

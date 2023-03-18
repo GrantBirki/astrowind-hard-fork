@@ -1,6 +1,7 @@
-// Configuration for the team component
+// Configuration for the team component / page
 
 const team = {
+  // Whether the team page is enabled or not
   enabled: true,
 
   // The title of the team section
@@ -20,9 +21,9 @@ const team = {
       avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png',
       // Social links of the first member
       social: {
-        twitter: '#',
+        // twitter: '#',
         instagram: '#',
-        facebook: '#',
+        // facebook: '#',
         linkedin: '#',
         github: '#',
       },

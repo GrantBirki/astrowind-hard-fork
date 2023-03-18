@@ -10,6 +10,19 @@ export default function Team(props) {
             </h3>
             {member?.title && <p>{member.title}</p>}
             <ul class="flex justify-center mt-4 space-x-4">
+              {member?.social?.instagram && (
+                <li>
+                  <a href={member?.social?.instagram} class="text-[#e4405f] hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm4.5-11.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-9 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm5.5 6.5c-3.866 0-7-1.343-7-3s3.134-3 7-3 7 1.343 7 3-3.134 3-7 3z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+              )}
               {member?.social?.facebook && (
                 <li>
                   <a href={member?.social?.facebook} class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -32,7 +45,6 @@ export default function Team(props) {
                   </a>
                 </li>
               )}
-
               {member?.social?.linkedin && (
                 <li>
                   <a href={member?.social?.linkedin} class="text-[#0077b5] hover:text-gray-900 dark:hover:text-white">
