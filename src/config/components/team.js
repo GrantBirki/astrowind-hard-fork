@@ -21,6 +21,7 @@ const team = {
       // Social links of the first member
       social: {
         twitter: '#',
+        instagram: '#',
         facebook: '#',
         linkedin: '#',
         github: '#',
