@@ -202,9 +202,9 @@ const meta = {
     locations && locations.enabled && locations.locations.length > 0 && (
       <Locations
         client:only="react"
-        highlight="Physical Locations"
-        title="Locations"
-        subtitle="Drop in and see us at one of our locations."
+        highlight={locations.highlight}
+        title={locations.title}
+        subtitle={locations.subtitle}
         locations={locations.locations}
       />
     )
