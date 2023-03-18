@@ -12,7 +12,7 @@ export default function Team(props) {
             <ul class="flex justify-center mt-4 space-x-4">
               {member?.social?.website && (
                 <li>
-                  <a href={member?.social?.website} class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
+                  <a href={member?.social?.website} class="text-[#0077b5] hover:text-gray-900 dark:hover:text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="icon icon-tabler icon-tabler-world-www"
