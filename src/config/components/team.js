@@ -28,6 +28,42 @@ const team = {
         github: '#',
       },
     },
+    {
+      name: 'Bonnie Green',
+      title: 'CEO',
+      avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png',
+      social: {
+        // twitter: '#',
+        instagram: '#',
+        // facebook: '#',
+        linkedin: '#',
+        github: '#',
+      },
+    },
+    {
+      name: 'Jese Leos',
+      title: 'UI/UX Designer',
+      avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png',
+      social: {
+        // twitter: '#',
+        instagram: '#',
+        // facebook: '#',
+        linkedin: '#',
+        github: '#',
+      },
+    },
+    {
+      name: 'Michael Gough',
+      title: 'Frontend Developer',
+      avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png',
+      social: {
+        // twitter: '#',
+        instagram: '#',
+        // facebook: '#',
+        linkedin: '#',
+        github: '#',
+      },
+    },
   ],
 };
 
