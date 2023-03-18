@@ -45,6 +45,7 @@ const footerData = {
       title: 'Company',
       links: [
         { text: 'About', href: '#' },
+        { text: 'Team', href: getPermalink('/team') },
         { text: 'Blog', href: '#' },
         { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
