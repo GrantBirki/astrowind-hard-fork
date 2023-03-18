@@ -45,7 +45,7 @@ const team = {
     {
       name: 'Jese Leos',
       title: 'UI/UX Designer',
-      avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png',
+      // avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png',
       social: {
         // website: '#',
         // twitter: '#',
