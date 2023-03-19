@@ -7,6 +7,9 @@ const steps = {
   // The title text of the component
   title: 'Get your dream website up and running in no time with AstroWind.',
 
+  // Subtitle text of the component
+  subtitle: 'Lorem ipsum dolor sit amet',
+
   // Items to be displayed as steps
   items: [
     {
