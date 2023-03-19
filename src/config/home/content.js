@@ -26,16 +26,19 @@ const content = {
         title: 'Per ei quaeque sensibus',
         description:
           'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+        icon: 'tabler:mood-smile',
       },
       {
         title: 'Cu imperdiet posidonium sed',
         description:
           'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+        icon: 'tabler:rocket',
       },
       {
         title: 'Nulla omittam sadipscing mel ne',
         description:
           'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+        icon: 'tabler:bolt',
       },
     ],
 
