@@ -1,5 +1,7 @@
 # 🚀 AstroWind
 
+test
+
 [![deploy](https://github.com/GrantBirki/astrowind/actions/workflows/deploy.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/deploy.yml) [![ci](https://github.com/GrantBirki/astrowind/actions/workflows/ci.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/ci.yml) [![lint](https://github.com/GrantBirki/astrowind/actions/workflows/lint.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/lint.yml) [![CodeQL](https://github.com/GrantBirki/astrowind/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/GrantBirki/astrowind/actions/workflows/codeql-analysis.yml)
 
 This is a custom AstroWind template for deployment to GitHub pages
