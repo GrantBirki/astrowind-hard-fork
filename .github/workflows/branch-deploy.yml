@@ -40,7 +40,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@fafc3d04f88582bbaa72502ac02b1eb5109ec0dd # pin@v5.1.0
+      - uses: github/branch-deploy@v5.1.1
         id: branch-deploy
         with:
           trigger: ".deploy"
@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # pin@v3.3.0
+        uses: actions/checkout@v3.5.0
         with:
           ref: ${{ needs.trigger.outputs.ref }}
 
