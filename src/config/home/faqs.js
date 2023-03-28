@@ -12,7 +12,7 @@ const faqs = {
 
   // Subtitle for the faqs component
   subtitle:
-    'Duis turpis duiiiiii, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
+    'Duis turpis duooo, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
 
   // List of FAQs to display with HTML support
   items: [
