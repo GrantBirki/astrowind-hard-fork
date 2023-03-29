@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "bootstrap": "npm install && npm run astro sync && npm run astro check",
     "format": "prettier -w .",
     "format-ci": "prettier --check .",
     "lint:eslint": "eslint . --ext .js,.jsx,.ts,.astro"
