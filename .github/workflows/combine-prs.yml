@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # allows you to manually trigger the workflow
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
