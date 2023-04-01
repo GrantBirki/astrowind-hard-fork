@@ -14,7 +14,7 @@ permissions:
   pages: write
   id-token: write
 
-# set an environment variable for use in the jobs pointing the site_url
+# set an environment variable for use in all the jobs pointing the site_url
 env:
   site_url: https://astro-demo.birki.io
 
