@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://astro-demo.birki.io/sitemap-0.xml
+Sitemap: https://astro-demo.birki.io/sitemap-index.xml
