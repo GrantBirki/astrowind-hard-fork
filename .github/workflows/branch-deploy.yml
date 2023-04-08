@@ -58,7 +58,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3
         with:
           ref: ${{ needs.trigger.outputs.ref }}
 
@@ -69,9 +69,6 @@ jobs:
   deploy:
     needs: [ trigger, build ]
     if: ${{ needs.trigger.outputs.continue == 'true' }} # only run if the trigger job set continue to true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
