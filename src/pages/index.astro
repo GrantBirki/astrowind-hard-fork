@@ -211,6 +211,25 @@ const meta = {
     )
   }
 
+  <!-- Block Widget ****************** -->
+
+  <Block
+    backgroundCss={''}
+    enabled={true}
+    title={'Photo Gallery'}
+    subtitle={'Photo Gallery Component'}
+    highlight={'Gallery'}
+    content={'This template also comes with a photo gallery page. Check it out!'}
+    callToAction={{
+      enabled: true,
+      text: 'View Gallery',
+      href: '/gallery',
+      target: '_self',
+      rel: 'noopener',
+      icon: 'tabler:photo',
+    }}
+  />
+
   <!-- CallToAction Widget *********** -->
   {
     callToAction && callToAction.enabled && (
