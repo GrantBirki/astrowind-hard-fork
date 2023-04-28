@@ -35,6 +35,7 @@ const {
   image = await Astro.slots.render('image'),
 } = Astro.props;
 
+// Set background style to '' to disable background (uses default background)
 var backgroundStyle = '';
 if (backgroundCss === '' || backgroundCss) {
   backgroundStyle = backgroundCss;
