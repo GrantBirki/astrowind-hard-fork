@@ -45,6 +45,10 @@ const headerData = {
           href: getPermalink('/team'),
         },
         {
+          text: 'Gallery',
+          href: getPermalink('/gallery'),
+        },
+        {
           text: 'Contact',
           href: '#',
         },

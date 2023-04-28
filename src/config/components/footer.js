@@ -46,6 +46,7 @@ const footerData = {
       links: [
         { text: 'About', href: '#' },
         { text: 'Team', href: getPermalink('/team') },
+        { text: 'Gallery', href: getPermalink('/gallery') },
         { text: 'Blog', href: '#' },
         { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
