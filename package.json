@@ -1,6 +1,6 @@
 {
   "name": "astrowind",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "description": "A template to make your website using Astro + Tailwind CSS + GitHub Pages",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -55,6 +55,7 @@
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-photo-album": "^2.0.4"
   }
 }
