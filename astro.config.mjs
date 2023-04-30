@@ -48,7 +48,7 @@ export default defineConfig({
       },
       img: false,
       js: true,
-      svg: false,
+      svg: true,
       logger: 1,
     }),
     react(),
