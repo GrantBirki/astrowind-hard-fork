@@ -35,6 +35,7 @@ const {
   image = await Astro.slots.render('image'),
 } = Astro.props;
 
+// Set background style to '' to disable background (uses default background)
 var backgroundStyle = '';
 if (backgroundCss === '' || backgroundCss) {
   backgroundStyle = backgroundCss;
@@ -47,8 +48,8 @@ if (backgroundCss === '' || backgroundCss) {
   enabled === true && (
     <section class:list={`${backgroundStyle} px-10 py-10`}>
       <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-        {(title || subtitle || highlight) && (
-          <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        {(title || subtitle || highlight || content) && (
+          <div class="md:mx-auto text-center max-w-3xl">
             {highlight && (
               <p
                 class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"

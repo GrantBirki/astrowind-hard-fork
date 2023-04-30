@@ -1,0 +1,57 @@
+---
+import { SITE } from '~/config/site/config.js';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Gallery from '~/components/widgets/Gallery.jsx';
+import Hero from '~/components/widgets/Hero.astro';
+import hero from '~/config/pages/gallery/hero';
+import gallery from '~/config/pages/gallery/gallery';
+import Block from '~/components/widgets/Block.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  {
+    hero && hero.enabled && (
+      <Hero
+        padding={hero.padding}
+        callToAction={{
+          enabled: hero.callToAction.enabled,
+          text: hero.callToAction.text,
+          href: hero.callToAction.href,
+          target: hero.callToAction.target,
+          rel: hero.callToAction.rel,
+          icon: hero.callToAction.icon,
+        }}
+        callToAction2={{
+          enabled: hero.callToAction2.enabled,
+          text: hero.callToAction2.text,
+          href: hero.callToAction2.href,
+          target: hero.callToAction2.target,
+          rel: hero.callToAction2.rel,
+          icon: hero.callToAction2.icon,
+        }}
+        image={{ enabled: hero.image.enabled, src: hero.image.src, alt: hero.image.alt }}
+      >
+        {hero.title.enabled && <Fragment slot="title" set:html={hero.title.text} />}
+
+        {hero.subtitle.enabled && <Fragment slot="subtitle" set:html={hero.subtitle.text} />}
+      </Hero>
+    )
+  }
+
+  <br />
+  <Block enabled={true} title={'Photo Gallery'} content={'A collection of photos'} />
+  <br />
+
+  <!-- Gallery -->
+  {gallery && gallery.enabled && <Gallery client:only="react" photos={gallery.photos} layout={gallery.layout} />}
+  <!-- End of Gallery -->
+</Layout>
