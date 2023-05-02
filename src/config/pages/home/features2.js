@@ -13,6 +13,9 @@ const features2 = {
   // Small highlight text at the top of the features2 section
   highlight: 'Components',
 
+  // total number of columns to display width wise
+  columns: 3,
+
   // The items in the features2 section
   items: [
     {
