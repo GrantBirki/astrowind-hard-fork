@@ -27,5 +27,8 @@ jobs:
       - name: install dependencies
         run: npm ci
 
+      - name: check
+        run: npm run astro check
+
       - name: build
         run: npm run build
