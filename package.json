@@ -1,6 +1,6 @@
 {
   "name": "astrowind",
-  "description": "A template to make your website using Astro + Tailwind CSS + GitHub Pages",
+  "description": "A template to make a website using Astro + Tailwind CSS + GitHub Pages",
   "version": "0.0.0",
   "private": true,
   "scripts": {
