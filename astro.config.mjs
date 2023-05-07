@@ -34,7 +34,7 @@ export default defineConfig({
     }),
     sitemap(),
     image({
-      cacheDir: "./.cache/image",
+      cacheDir: './.cache/image',
       service: sharpImageService(),
     }),
     mdx(),
