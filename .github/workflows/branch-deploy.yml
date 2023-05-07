@@ -62,6 +62,13 @@ jobs:
         with:
           ref: ${{ needs.trigger.outputs.ref }}
 
+      - name: astro build cache
+        id: astro-build-cache
+        uses: actions/cache@v3
+        with:
+          path: .cache
+          key: ${{ runner.os }}-astro-build-cache
+
       - name: build with astro
         uses: withastro/action@dc081df9eacdb11181ea51e5d05853faa5aee891 # pin@v0.2.0
 
