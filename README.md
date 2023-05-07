@@ -166,6 +166,10 @@ This template also comes bundled with the [branch-deploy](https://github.com/git
 
 The `branch-deploy` Action will allow you to trigger branch deployments from pull requests by using comments such as `.deploy`.
 
+## Build Cache
+
+This templates also uses a custom GitHub Actions build cache to help speed things up in CI when processing images. If you make any changes to images when working on a project using this template, please ensure to run `npm run build` before deploying to ensure your `cache.json` file is updated.
+
 ## Making Changes
 
 This section goes into details on how you can make changes to the template.
