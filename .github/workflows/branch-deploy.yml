@@ -67,7 +67,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: .cache
-          key: ${{ runner.os }}-astro-build-${{ hashFiles('./cache/image/cache.json') }}
+          key: ${{ runner.os }}-astro-build-${{ hashFiles('**/cache.json') }}
 
       - name: build with astro
         uses: withastro/action@dc081df9eacdb11181ea51e5d05853faa5aee891 # pin@v0.2.0
