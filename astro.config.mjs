@@ -1,6 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { defineConfig } from 'astro/config';
+import { defineConfig, sharpImageService } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import image from '@astrojs/image';
@@ -23,6 +23,9 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
   },
+  experimental: {
+    assets: true,
+  },
   integrations: [
     tailwind({
       config: {
@@ -31,7 +34,8 @@ export default defineConfig({
     }),
     sitemap(),
     image({
-      serviceEntryPoint: '@astrojs/image/sharp',
+      cacheDir: './.cache/image',
+      service: sharpImageService(),
     }),
     mdx(),
     ...whenExternalScripts(() =>
