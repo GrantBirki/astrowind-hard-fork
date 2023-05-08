@@ -12,7 +12,8 @@
     "bootstrap": "npm install && npm run astro sync && npm run astro check",
     "format": "prettier -w .",
     "format-ci": "prettier --check .",
-    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.astro"
+    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.astro",
+    "all": "npm run format && npm run lint:eslint && npm run build"
   },
   "devDependencies": {
     "@astrojs/image": "^0.16.4",
