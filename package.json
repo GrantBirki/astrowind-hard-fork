@@ -16,7 +16,7 @@
     "all": "npm run format && npm run lint:eslint && npm run build"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.16.8", 
+    "@astrojs/image": "^0.16.8",
     "@astrojs/mdx": "^0.19.1",
     "@astrojs/partytown": "^1.2.0",
     "@astrojs/rss": "^2.3.2",
