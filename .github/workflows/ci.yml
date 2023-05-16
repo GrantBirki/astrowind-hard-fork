@@ -38,6 +38,7 @@ jobs:
       - name: check
         run: npm run astro check
 
+      # get the hash of our 'cache' file before the build
       - name: calculate hash
         id: hash
         run: echo "cachehash=${{ hashFiles('**/cache.json') }}" >> $GITHUB_OUTPUT
@@ -45,6 +46,7 @@ jobs:
       - name: build
         run: npm run build
 
+      # compare the hashes after the build completes
       - name: check cache
         id: check-cache
         run: |
@@ -55,8 +57,14 @@ jobs:
             echo "cachepass=false" >> $GITHUB_OUTPUT
           fi
 
+      # if the hashes don't match, we need to update the cache, so we leave a comment on the PR
       - name: cache comment
-        if: ${{ steps.check-cache.outputs.cachepass == 'true' }}
+        if: ${{ steps.check-cache.outputs.cachepass == 'false' }} && github.event_name == 'pull_request'
         uses: GrantBirki/comment@v2.0.5
         with:
           file: .github/cache-msg.md
+
+      # if the hashes don't match, and this isn't a PR, fail the CI job
+      - name: cache failure - non-pr
+        if: ${{ steps.check-cache.outputs.cachepass == 'false' }} && github.event_name != 'pull_request'
+        run: echo "hash mismatch! Please run 'npm run all' and commit the changes." && exit 1
