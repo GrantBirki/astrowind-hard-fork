@@ -87,7 +87,7 @@ const content = {
       // Alt text for the image
       alt: 'Vintage Image',
       // The image to be displayed
-      src: import('~/assets/images/vintage.jpg'),
+      src: import('~/assets/images/vintage-bus.jpg'),
     },
   },
 };
