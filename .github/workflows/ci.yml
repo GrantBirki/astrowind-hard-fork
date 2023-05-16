@@ -50,21 +50,21 @@ jobs:
       - name: check cache
         id: check-cache
         run: |
-          if [ ${{ steps.hash.outputs.cachehash }} == ${{ hashFiles('**/cache.json') }} ]
+          if [[ "${{ steps.hash.outputs.cachehash }}" == "${{ hashFiles('**/cache.json') }}" ]]
           then
-            echo "cachepass=true" >> $GITHUB_OUTPUT
+            echo "success=true" >> $GITHUB_OUTPUT
           else
-            echo "cachepass=false" >> $GITHUB_OUTPUT
+            echo "success=false" >> $GITHUB_OUTPUT
           fi
 
       # if the hashes don't match, we need to update the cache, so we leave a comment on the PR
       - name: cache comment
-        if: ${{ steps.check-cache.outputs.cachepass == 'false' }} && github.event_name == 'pull_request'
+        if: ${{ steps.check-cache.outputs.success == 'false' }} && github.event_name == 'pull_request'
         uses: GrantBirki/comment@v2.0.5
         with:
           file: .github/cache-msg.md
 
-      # if the hashes don't match, and this isn't a PR, fail the CI job
-      - name: cache failure - non-pr
-        if: ${{ steps.check-cache.outputs.cachepass == 'false' }} && github.event_name != 'pull_request'
+      # if the hashes don't match, we now fail the CI job
+      - name: cache failure
+        if: ${{ steps.check-cache.outputs.success == 'false' }}
         run: echo "hash mismatch! Please run 'npm run all' and commit the changes." && exit 1
