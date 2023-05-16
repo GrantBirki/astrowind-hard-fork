@@ -52,8 +52,12 @@ jobs:
         run: |
           if [[ "${{ steps.hash.outputs.cachehash }}" == "${{ hashFiles('**/cache.json') }}" ]]
           then
+            echo "hashes are equal - OK"
             echo "success=true" >> $GITHUB_OUTPUT
           else
+            echo "hashes are not equal - FAIL"
+            echo "expected: ${{ steps.hash.outputs.cachehash }}"
+            echo "actual: ${{ hashFiles('**/cache.json') }}"
             echo "success=false" >> $GITHUB_OUTPUT
           fi
 
