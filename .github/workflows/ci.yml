@@ -37,5 +37,25 @@ jobs:
       - name: check
         run: npm run astro check
 
+      - name: calculate hash
+        id: hash
+        run: echo "cachehash=${{ hashFiles('**/cache.json') }}" >> $GITHUB_OUTPUT
+
       - name: build
         run: npm run build
+
+      - name: check cache
+        id: check-cache
+        run: |
+          if [ ${{ steps.hash.outputs.cachehash }} == ${{ hashFiles('**/cache.json') }} ]
+          then
+            echo "cachepass=true" >> $GITHUB_OUTPUT
+          else
+            echo "cachepass=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: cache comment
+        if: ${{ steps.check-cache.outputs.cachepass == 'true' }}
+        uses: GrantBirki/comment@v2.0.5
+        with:
+          file: .github/cache-msg.md
