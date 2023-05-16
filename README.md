@@ -170,6 +170,10 @@ The `branch-deploy` Action will allow you to trigger branch deployments from pul
 
 This templates also uses a custom GitHub Actions build cache to help speed things up in CI when processing images. If you make any changes to images when working on a project using this template, please ensure to run `npm run build` before deploying to ensure your `cache.json` file is updated.
 
+## Using this Template
+
+You should probably do a search through this repo and replace all occurances of `astro-demo.birki.io` with your own domain as well.
+
 ## Making Changes
 
 This section goes into details on how you can make changes to the template.
