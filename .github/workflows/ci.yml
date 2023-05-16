@@ -63,7 +63,7 @@ jobs:
 
       # if the hashes don't match, we need to update the cache, so we leave a comment on the PR
       - name: cache comment
-        if: ${{ steps.check-cache.outputs.success == 'false' }} && github.event_name == 'pull_request'
+        if: ${{ steps.check-cache.outputs.success == 'false' }}
         uses: GrantBirki/comment@v2.0.5
         with:
           file: .github/cache-msg.md
