@@ -57,7 +57,7 @@ jobs:
           else
             echo "hashes are not equal - FAIL"
             echo "expected: ${{ steps.hash.outputs.cachehash }}"
-            echo "actual: ${{ hashFiles('**/cache.json') }}"
+            echo "actual:   ${{ hashFiles('**/cache.json') }}"
             echo "success=false" >> $GITHUB_OUTPUT
           fi
 
