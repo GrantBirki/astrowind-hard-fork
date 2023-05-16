@@ -18,9 +18,9 @@ const defaultImage = SITE.defaultImage
   ? (
       await getImage({
         src: SITE.defaultImage,
-        alt: 'Default image',
-        width: 1200,
-        height: 628,
+        alt: SITE.defaultImageAlt || '',
+        width: SITE.defaultImageWidth,
+        height: SITE.defaultImageHeight,
       })
     ).src
   : '';
