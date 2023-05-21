@@ -1,3 +1,5 @@
+import { AstroComponentFactory } from 'astro/dist/runtime/server';
+
 export interface Post {
   id: string;
   slug: string;
@@ -18,8 +20,7 @@ export interface Post {
   tags?: Array<string>;
   author?: string;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Content: any;
+  Content: AstroComponentFactory;
   content?: string;
 
   readingTime?: number;
