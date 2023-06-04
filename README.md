@@ -136,7 +136,7 @@ Here are some basic commands to get you up and running to develop with this temp
 
 3. View your site at [`localhost:3000`](http://localhost:3000/)
 
-> Live reload is enabled by default, so any changes you make will be reflected in the browser.
+> Live reload is enabled by default, so any changes you make will be reflected in the browser
 
 ## Deployment
 
