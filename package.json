@@ -16,7 +16,7 @@
     "all": "npm run format && npm run lint:eslint && npm run build"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.16.8",
+    "@astrojs/image": "^0.17.0",
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/partytown": "^1.2.0",
     "@astrojs/rss": "^2.4.3",
@@ -52,7 +52,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.13.2",
+    "@mui/material": "^5.13.4",
     "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.3",
     "react": "^18.2.0",
