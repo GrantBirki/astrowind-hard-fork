@@ -10,6 +10,7 @@ import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/config/site/config.js';
 import react from '@astrojs/react';
+import icon from 'astro-icon';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) =>
   SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
@@ -27,6 +28,15 @@ export default defineConfig({
     assets: true,
   },
   integrations: [
+    icon({
+      include: {
+        mdi: ['*'], // Loads entire Material Design Icon set
+        tabler: ['*'], // Loads entire Tabler Icon set
+        'flat-color-icons': ['*'], // Loads entire Flat Color Icon set
+        'icon-park': ['*'], // Loads entire Icon Park Icon set
+        ri: ['*'], // Loads entire Remix Icon set
+      },
+    }),
     tailwind({
       config: {
         applyBaseStyles: false,
