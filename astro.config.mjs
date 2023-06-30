@@ -32,6 +32,9 @@ export default defineConfig({
       {
         include: {
           mdi: ["*"], // Loads entire Material Design Icon set
+          tabler: ["*"], // Loads entire Tabler Icon set
+          'flat-color-icons': ["*"], // Loads entire Flat Color Icon set
+          'icon-park': ["*"], // Loads entire Icon Park Icon set
         },
       }
     ),
