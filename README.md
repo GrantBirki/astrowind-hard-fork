@@ -16,6 +16,10 @@ This fork is designed for those who are not extremely familiar with Astro, or ev
 
 This fork is also designed to be deployed to GitHub pages, which is a free and easy way to host your website.
 
+## Full Offline Development Support
+
+After running `npm i` and `npm run dev` for the first time, you can develop your site completely offline!
+
 ## Config Files
 
 The core way this template is different from the original is that it heavily uses `.js` config files to configure data and content for its site.
