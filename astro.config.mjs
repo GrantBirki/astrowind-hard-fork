@@ -34,6 +34,7 @@ export default defineConfig({
         tabler: ['*'], // Loads entire Tabler Icon set
         'flat-color-icons': ['*'], // Loads entire Flat Color Icon set
         'icon-park': ['*'], // Loads entire Icon Park Icon set
+        ri: ['*'], // Loads entire Remix Icon set
       },
     }),
     tailwind({
