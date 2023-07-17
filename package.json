@@ -59,7 +59,7 @@
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.13.7",
     "@types/react": "^18.2.11",
-    "@types/react-dom": "^18.2.3",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.2.2"
