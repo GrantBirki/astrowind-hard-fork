@@ -27,7 +27,7 @@
     "@fontsource/inter": "^4.5.15",
     "@iconify-json/flat-color-icons": "^1.1.6",
     "@iconify-json/icon-park": "^1.1.11",
-    "@iconify-json/mdi": "^1.1.52",
+    "@iconify-json/mdi": "^1.1.53",
     "@iconify-json/ri": "^1.1.10",
     "@iconify-json/tabler": "^1.1.81",
     "@tailwindcss/typography": "^0.5.9",
