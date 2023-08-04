@@ -146,7 +146,7 @@ Here are some basic commands to get you up and running to develop with this temp
 
 > Deployment docs for GitHub Pages
 
-First, clone this repository on own GitHub account
+First, clone this repository to your own GitHub account
 
 If you want to deploy to a basic GitHub domain name, do the following to [`src/config/site/config.js`](src/config/site/config.js):
 
