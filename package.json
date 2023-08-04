@@ -28,7 +28,7 @@
     "@iconify-json/flat-color-icons": "^1.1.6",
     "@iconify-json/icon-park": "^1.1.11",
     "@iconify-json/mdi": "^1.1.52",
-    "@iconify-json/ri": "^1.1.10",
+    "@iconify-json/ri": "^1.1.11",
     "@iconify-json/tabler": "^1.1.83",
     "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
