@@ -1,15 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { Picture } from '@astrojs/image/components';
-
-interface CallToAction {
-  text: string;
-  href: string;
-  target: string;
-  rel: string;
-  icon?: string;
-  enabled?: boolean;
-}
+import type { CallToAction } from '~/components/widgets/CallToAction.astro';
 
 export interface Props {
   padding?: any;
