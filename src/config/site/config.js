@@ -1,6 +1,4 @@
 // General configuration for the website
-
-import defaultImage from '../../assets/images/default.png';
 import blog from './blog';
 
 const CONFIG = {
@@ -19,14 +17,6 @@ const CONFIG = {
   // Website description
   description:
     '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
-
-  // The website's preview image that is displayed when sharing the website on social media
-  defaultImage: defaultImage,
-  // The default alt attribute for the preview image
-  defaultImageAlt: 'Default image',
-  // The default width and height of the preview image
-  defaultImageWidth: 1200,
-  defaultImageHeight: 628,
 
   // Default site theme
   // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

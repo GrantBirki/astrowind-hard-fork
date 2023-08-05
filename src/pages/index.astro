@@ -26,6 +26,8 @@ import callToAction from '~/config/components/call-to-action';
 import stats from '~/config/pages/home/stats';
 import locations from '~/config/pages/home/locations';
 
+import heroImg from '~/assets/hero.png'
+
 const meta = {
   title: SITE.title,
   description: SITE.description,
@@ -173,7 +175,7 @@ const meta = {
     content={'In a text block you can add any content you want. This could be a description about something, a quote, or other details. With this component you can optionally add an image and call to action buttons.'}
     image={{
       enabled: true,
-      src: import('~/assets/images/hero.png'),
+      src: heroImg.src,
       alt: 'alt text here',
     }}
     callToAction={{

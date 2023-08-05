@@ -1,7 +1,6 @@
 ---
 import { AstroSeo } from '@astrolib/seo';
 import { GoogleAnalytics } from '@astrolib/analytics';
-import { getImage } from '@astrojs/image';
 
 import { SITE } from '~/config/site/config.js';
 import { MetaSEO } from '~/types';
@@ -10,19 +9,19 @@ import { getRelativeUrlByFilePath } from '~/utils/directories';
 
 import CustomStyles from '~/components/CustomStyles.astro';
 
+import defaultImg from '../../assets/images/default.png';
+
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
 }
 
-const defaultImage = SITE.defaultImage
-  ? (
-      await getImage({
-        src: SITE.defaultImage,
-        alt: SITE.defaultImageAlt || '',
-        width: SITE.defaultImageWidth,
-        height: SITE.defaultImageHeight,
-      })
-    ).src
+const defaultImage = defaultImg
+  ? {
+      src: defaultImg.src,
+      alt: '',
+      width: defaultImg.width,
+      height: defaultImg.height,
+    }
   : '';
 
 const {
