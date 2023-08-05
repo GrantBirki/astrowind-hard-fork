@@ -1,0 +1,51 @@
+---
+import { SITE } from '~/config/site/config.js';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Locations from '~/components/widgets/Locations.jsx';
+
+import hero from '~/config/pages/stores/hero';
+import locations from '~/config/pages/stores/locations';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  {
+    hero && hero.enabled && (
+      <Hero
+        callToAction={{
+          enabled: hero.callToAction.enabled,
+          text: hero.callToAction.text,
+          href: hero.callToAction.href,
+          target: hero.callToAction.target,
+          rel: hero.callToAction.rel,
+          icon: hero.callToAction.icon,
+        }}
+      >
+        {hero.title.enabled && <Fragment slot="title" set:html={hero.title.text} />}
+
+        {hero.subtitle.enabled && <Fragment slot="subtitle" set:html={hero.subtitle.text} />}
+      </Hero>
+    )
+  }
+    <!-- Locations Widget ****************** -->
+    {
+      locations && locations.enabled && locations.locations.length > 0 && (
+        <Locations
+          client:only="react"
+          highlight={locations.highlight}
+          title={locations.title}
+          subtitle={locations.subtitle}
+          locations={locations.locations}
+        />
+      )
+    }
+</Layout>
