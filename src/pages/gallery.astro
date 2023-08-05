@@ -2,7 +2,7 @@
 import { SITE } from '~/config/site/config.js';
 import Layout from '~/layouts/PageLayout.astro';
 
-import Gallery from '~/components/widgets/Gallery.jsx';
+import ImgGallery from '~/components/widgets/Gallery.jsx';
 import Hero from '~/components/widgets/Hero.astro';
 import hero from '~/config/pages/gallery/hero';
 import gallery from '~/config/pages/gallery/gallery';
@@ -52,6 +52,6 @@ const meta = {
   <br />
 
   <!-- Gallery -->
-  {gallery && gallery.enabled && <Gallery client:only="react" photos={gallery.photos} layout={gallery.layout} />}
+  {gallery && gallery.enabled && <ImgGallery client:only="react" photos={gallery.photos} layout={gallery.layout} />}
   <!-- End of Gallery -->
 </Layout>
