@@ -24,7 +24,6 @@ import features from '~/config/pages/home/features';
 import features2 from '~/config/pages/home/features2';
 import callToAction from '~/config/components/call-to-action';
 import stats from '~/config/pages/home/stats';
-import locations from '~/config/pages/home/locations';
 
 const meta = {
   title: SITE.title,
@@ -197,20 +196,6 @@ const meta = {
   <!-- Stats Widget ****************** -->
 
   {stats && stats.enabled && <Stats items={stats.items} />}
-
-  <!-- Locations Widget ****************** -->
-
-  {
-    locations && locations.enabled && locations.locations.length > 0 && (
-      <Locations
-        client:only="react"
-        highlight={locations.highlight}
-        title={locations.title}
-        subtitle={locations.subtitle}
-        locations={locations.locations}
-      />
-    )
-  }
 
   <!-- Block Widget ****************** -->
 
