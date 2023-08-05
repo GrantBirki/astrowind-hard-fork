@@ -30,11 +30,11 @@ const headerData = {
       links: [
         {
           text: 'Features',
-          href: '#',
+          href: getPermalink('#features'),
         },
         {
           text: 'Pricing',
-          href: '#',
+          href: getPermalink('/pricing'),
         },
         {
           text: 'About us',
@@ -50,7 +50,7 @@ const headerData = {
         },
         {
           text: 'Contact',
-          href: '#',
+          href: getPermalink('/contact'),
         },
         {
           text: 'Terms',
@@ -72,7 +72,28 @@ const headerData = {
     // The blog link is a special case, it uses the getBlogPermalink function
     {
       text: 'Blog',
-      href: getBlogPermalink(),
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'Article',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'Article (with Widgets)',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Category Page',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Tag Page',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
     },
   ],
 

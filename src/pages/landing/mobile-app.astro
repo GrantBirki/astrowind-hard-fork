@@ -5,6 +5,8 @@ import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import headerData from '~/config/components/header';
+
 import config from '~/config/site/config';
 
 const meta = {
@@ -16,19 +18,7 @@ const meta = {
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
-      links={[]}
-      actions={[
-        {
-          type: 'ghost',
-          text: 'Login',
-          href: '#',
-        },
-        {
-          type: 'primary',
-          text: 'Sign Up',
-          href: '#',
-        },
-      ]}
+      {...headerData}
       showRssFeed={config.showRssFeed}
       showToggleTheme={config.showToggleTheme}
       isSticky={config.isSticky}

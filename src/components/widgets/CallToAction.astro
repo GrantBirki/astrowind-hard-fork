@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-interface CallToAction {
+export interface CallToAction {
   text: string;
   href: string;
   icon?: string;
@@ -24,7 +24,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative not-prose">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="py-12 md:py-20">
       <div
