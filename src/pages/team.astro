@@ -1,7 +1,7 @@
 ---
 import { SITE } from '~/config/site/config.js';
 import Layout from '~/layouts/PageLayout.astro';
-import Team from '~/components/widgets/Team.jsx';
+import TeamWidget from '~/components/widgets/Team.jsx';
 import team from '~/config/components/team';
 
 import { getHomePermalink } from '~/utils/permalinks';
@@ -37,7 +37,7 @@ if (team?.enabled === true) {
             <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">{team.description}</p>
           </div>
           <div class={teamColCss}>
-            <Team members={team.members} />
+            <TeamWidget members={team.members} />
           </div>
         </div>
       </section>
