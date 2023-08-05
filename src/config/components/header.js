@@ -30,7 +30,7 @@ const headerData = {
       links: [
         {
           text: 'Features',
-          href: '#features',
+          href: getPermalink('#features'),
         },
         {
           text: 'Pricing',
