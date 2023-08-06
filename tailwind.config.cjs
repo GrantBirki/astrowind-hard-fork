@@ -9,6 +9,7 @@ module.exports = {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
         accent: 'var(--aw-color-accent)',
+        muted: 'var(--aw-color-muted)',
         sage: {
           // https://www.color-hex.com/color/4d5d53
           50: '#edeeed',
