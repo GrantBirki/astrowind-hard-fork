@@ -61,6 +61,41 @@ const CONFIG = {
   // The position of the header
   // Values: "center" | "right" | "left"
   headerPosition: 'right',
+
+  i18n: {
+    language: 'en',
+    textDirection: 'ltr',
+  },
+
+  // Global metadata config
+  metadata: {
+    title: {
+      default: 'AstroWind',
+      template: '%s — AstroWind',
+    },
+    description:
+      '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      type: 'website',
+      siteName: 'AstroWind',
+      images: [
+        {
+          url: '~/assets/images/default.jpg',
+          width: 1200,
+          height: 628,
+        },
+      ],
+    },
+    twitter: {
+      handle: '@GrantBirki',
+      site: '@GrantBirki',
+      cardType: 'summary_large_image',
+    },
+  },
 };
 
 export default CONFIG;

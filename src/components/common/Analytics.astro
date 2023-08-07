@@ -1,0 +1,9 @@
+---
+import { GoogleAnalytics } from '@astrolib/analytics';
+import { SITE } from '~/config/site/config.js';
+---
+
+<!-- Google Analytics -->
+{SITE?.googleAnalyticsId !== false &&
+<GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />
+}

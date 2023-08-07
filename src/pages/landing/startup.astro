@@ -4,17 +4,18 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 
 import headerData from '~/config/components/header';
 
 import config from '~/config/site/config';
 
-const meta = {
+const metadata = {
   title: 'Startup Landing Page',
 };
 ---
 
-<Layout {meta}>
+<Layout {metadata}>
   <Fragment slot="header">
     <Header
       {...headerData}
@@ -77,4 +78,52 @@ const meta = {
       waste more time! :P
     </Fragment>
   </CallToAction>
+
+  <Features3
+    title="Let us know how we can help"
+    subtitle="We're here to help and answer any question you might have."
+    columns={4}
+    items={[
+      {
+        title: 'Phone',
+        icon: 'tabler:phone',
+        callToAction: {
+          targetBlank: true,
+          text: 'Call us',
+          href: '/',
+        },
+      },
+      {
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          targetBlank: true,
+          text: 'Write to us',
+          href: '/',
+        },
+      },
+      {
+        title: 'Chat with sales',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          targetBlank: true,
+          text: 'Start chatting',
+          href: '/',
+        },
+      },
+      {
+        title: 'Chat with support',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          targetBlank: true,
+          text: 'Start chatting',
+          href: '/',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features3>
 </Layout>
