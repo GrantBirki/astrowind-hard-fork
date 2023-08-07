@@ -47,6 +47,13 @@ export interface CallToAction {
   classes?: Record<string, string>;
 }
 
+export interface ItemGrid {
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  classes?: Record<string, string>;
+}
+
 export interface Widget {
   id?: string;
   isDark?: boolean;
@@ -64,4 +71,14 @@ export interface Headline {
 export interface Testimonials extends Headline, Widget {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
+}
+
+export interface Features extends Headline, Widget {
+  image?: Image;
+  video?: Video;
+  items: Array<Item>;
+  columns: number;
+  callToAction1?: CallToAction;
+  callToAction2?: CallToAction;
+  isReversed?: boolean;
 }

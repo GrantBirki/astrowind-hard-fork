@@ -4,10 +4,11 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 
 import headerData from '~/config/components/header';
-
 import config from '~/config/site/config';
 
 const meta = {
@@ -48,6 +49,87 @@ const meta = {
       Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
     </Fragment>
   </Hero2>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Save time, achieve a polished look, and customize templates to fit your style. Join thousands of satisfied users who've transformed their documents effortlessly. Explore our templates now and experience the difference."
+    tagline="Step-by-step guide on how to use our app"
+    columns={2}
+    items={[
+      {
+        title: 'Download and Install the App',
+        description:
+          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+        icon: 'tabler:square-number-1',
+      },
+      {
+        title: 'Sign Up',
+        description:
+          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+        icon: 'tabler:square-number-2',
+      },
+      {
+        title: 'Browse Templates',
+        description:
+          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+        icon: 'tabler:square-number-3',
+      },
+      {
+        title: 'Preview and Select a Template',
+        description:
+          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+        icon: 'tabler:square-number-4',
+      },
+    ]}
+    image={{
+      src: 'https://cdn.pixabay.com/photo/2023/07/18/21/40/astronaut-8135685_1280.jpg',
+      alt: 'Astronaut Image',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Time Savings',
+        description: 'Sed condimentum dui vel lorem cursus molestie duis id tristique justo.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Professional Appearance',
+        description: 'Cras purus velit, finibus quis dui nec, faucibus porttitor purus.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Accessibility for Non-Designers',
+        description: 'Morbi volutpat ultricies dictum. In eu nunc id odio congue porttitor.',
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Cost-Efficiency',
+        description: 'Fusce vitae odio sed lacus tempor aliquam sit amet ut velit pellentesque sagittis cursus nisi.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Instant Download',
+        description:
+          'Sed semper tempus dolor, non pretium velit lacinia tristique, fusce hendrerit fermentum lorem dignissim convallis.',
+        icon: 'tabler:file-download',
+      },
+    ]}
+    image={{
+      src: 'https://cdn.pixabay.com/photo/2020/07/25/22/26/rocket-5438053_1280.jpg',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+    </Fragment>
+  </Content>
 
   <!-- Testimonials Widget *********** -->
 
