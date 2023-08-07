@@ -8,7 +8,7 @@ import { getHomePermalink } from '~/utils/permalinks';
 
 const title = `Error 404`;
 
-const meta = {
+const metadata = {
   title: SITE.title,
   description: SITE.description,
   dontUseTitleTemplate: true,
@@ -29,7 +29,7 @@ if (team?.enabled === true) {
 
 {
   team?.enabled && (
-    <Layout {meta}>
+    <Layout {metadata}>
       <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
@@ -47,7 +47,7 @@ if (team?.enabled === true) {
 
 {
   !team?.enabled && (
-    <Layout meta={{ title }}>
+    <Layout metadata={{ title }}>
       <section class="flex items-center h-full p-16">
         <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div class="max-w-md text-center">

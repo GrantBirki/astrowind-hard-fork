@@ -16,6 +16,7 @@ const {
 interface Props {
   dt:string
 }
+
 const content:string = await Astro.slots.render('default');
 ---
 <h6 set:html={dt}></h6>

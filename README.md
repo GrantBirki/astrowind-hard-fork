@@ -81,7 +81,7 @@ Inside AstroWind template, you'll see the following folders and files:
 │   │   │   └── ...
 │   │   └-- config.ts
 │   ├── layouts/
-│   │   ├── BaseLayout.astro
+│   │   ├── Layout.astro
 │   │   └── ...
 │   ├── pages/
 │   │   ├── [...blog]/
