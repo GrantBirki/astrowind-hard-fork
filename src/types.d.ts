@@ -68,6 +68,15 @@ export interface Headline {
   classes?: Record<string, string>;
 }
 
+export interface Item {
+  title?: string;
+  description?: string;
+  icon?: string;
+  classes?: Record<string, string>;
+  callToAction?: CallToAction;
+  image?: Image;
+}
+
 export interface Testimonials extends Headline, Widget {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
