@@ -34,7 +34,7 @@ export interface Post {
   draft?: boolean;
 
   /**  */
-  Content?: unknown;
+  Content?: string;
   content?: string;
 
   /**  */
