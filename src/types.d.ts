@@ -38,3 +38,30 @@ export interface MetaSEO {
   ogTitle?: string;
   ogType?: string;
 }
+
+export interface CallToAction {
+  targetBlank?: boolean;
+  text?: string;
+  icon?: string;
+  href?: string;
+  classes?: Record<string, string>;
+}
+
+export interface Widget {
+  id?: string;
+  isDark?: boolean;
+  bg?: string;
+  classes?: Record<string, string>;
+}
+
+export interface Headline {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  classes?: Record<string, string>;
+}
+
+export interface Testimonials extends Headline, Widget {
+  testimonials?: Array<Testimonial>;
+  callToAction?: CallToAction;
+}
