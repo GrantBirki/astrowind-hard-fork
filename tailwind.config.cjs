@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-// const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
@@ -9,7 +8,8 @@ module.exports = {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
         accent: 'var(--aw-color-accent)',
-        muted: 'var(--aw-color-muted)',
+        default: 'var(--aw-color-text-default)',
+        muted: 'var(--aw-color-text-muted)',
         sage: {
           // https://www.color-hex.com/color/4d5d53
           50: '#edeeed',
