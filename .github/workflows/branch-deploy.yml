@@ -40,7 +40,7 @@ jobs:
 
     steps:
       # execute the branch-deploy action
-      - uses: github/branch-deploy@v7.3.0
+      - uses: github/branch-deploy@v7.4.0
         id: branch-deploy
         with:
           trigger: ".deploy"
