@@ -34,7 +34,7 @@ export interface Post {
   draft?: boolean;
 
   /**  */
-  Content?: unknown;
+  Content?: string;
   content?: string;
 
   /**  */
@@ -150,7 +150,7 @@ export interface Testimonial {
   testimonial?: string;
   name?: string;
   job?: string;
-  image?: string | unknown;
+  image?: Image;
 }
 
 // COMPONENTS
@@ -179,8 +179,7 @@ export interface Collapse {
 
 // WIDGETS
 export interface Hero extends Headline, Widget {
-  content?: string;
-  image?: string | unknown;
+  image?: Image;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
   isReversed?: boolean;
@@ -209,15 +208,13 @@ export interface Clients extends Headline, Widget {
 }
 
 export interface Features extends Headline, Widget {
-  image?: string | unknown;
+  image?: Image;
   video?: Video;
   items: Array<Item>;
   columns: number;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
   isReversed?: boolean;
-  isBeforeContent?: boolean;
-  isAfterContent?: boolean;
 }
 
 export interface Faqs extends Headline, Widget {
@@ -234,16 +231,13 @@ export interface Steps extends Headline, Widget {
     icon?: string;
     classes?: Record<string, string>;
   }>;
-  callToAction?: string | CallToAction;
   image?: string | Image;
   isReversed?: boolean;
 }
 
 export interface Content extends Headline, Widget {
-  content?: string;
-  image?: string | unknown;
+  image?: string;
   items?: Array<Item>;
   columns?: number;
   isReversed?: boolean;
-  isAfterContent?: boolean;
 }
