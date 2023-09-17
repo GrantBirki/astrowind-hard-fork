@@ -45,7 +45,7 @@ jobs:
         with:
           trigger: ".deploy"
           environment: "github-pages"
-          production_environment: "github-pages"
+          production_environments: "github-pages"
           environment_targets: "github-pages"
           skip_completing: "true" # we will complete the deployment manually in the 'result' job
           admins: "GrantBirki" # <--- add your GitHub username here (if you want to use the admins feature)
