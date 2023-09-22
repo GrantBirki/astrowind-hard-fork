@@ -8,6 +8,8 @@ This is a custom AstroWind template for deployment to GitHub pages
 
 The original AstroWind template can be found here: [source](https://github.com/onwidget/astrowind)
 
+⚠️ Due to how fast the upstream source project has been moving and with how fast the Astro project has been moving, I am abandoning this fork. ⚠️
+
 ## Features
 
 > How is this template fork different?

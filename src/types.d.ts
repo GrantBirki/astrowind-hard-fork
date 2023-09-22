@@ -135,6 +135,7 @@ export interface Item {
 
 export interface Price {
   title?: string;
+  subtitle?: string;
   description?: string;
   price?: number;
   period?: string;
@@ -240,3 +241,31 @@ export interface Content extends Headline, Widget {
   columns?: number;
   isReversed?: boolean;
 }
+
+export interface Input {
+  type: HTMLInputTypeAttribute;
+  name: string;
+  label?: string;
+  autocomplete?: string;
+  placeholder?: string;
+}
+
+export interface Textarea {
+  label?: string;
+  placeholder?: string;
+  rows?: number;
+}
+
+export interface Disclaimer {
+  label?: string;
+}
+
+export interface Form {
+  inputs?: Array<Input>;
+  textarea?: Textarea;
+  disclaimer?: Disclaimer;
+  button?: string;
+  description?: string;
+}
+
+export interface Contact extends Headline, Form, Widget {}

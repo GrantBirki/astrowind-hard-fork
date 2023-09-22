@@ -1,10 +1,36 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+
 const metadata = {
-  title: "Contact",
+  title: 'Contact',
 };
 ---
 
-<Layout {metadata}>
-  Contact
+<Layout metadata={metadata}>
+  <ContactUs
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
+
 </Layout>
