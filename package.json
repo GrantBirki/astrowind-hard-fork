@@ -55,7 +55,7 @@
     "node": ">=19.7.0"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.2",
+    "@astrojs/react": "^3.0.5",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.14.8",
