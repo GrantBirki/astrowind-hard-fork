@@ -70,7 +70,7 @@ jobs:
           key: ${{ runner.os }}-astro-build-${{ hashFiles('**/cache.json') }}
 
       - name: build with astro
-        uses: withastro/action@e3193ac80e18917ceaeb9f2d47019ad3b2c0416a # pin@v0.3.0
+        uses: withastro/action@f122c0232093b3504e4c841a46c2eebd07c47392 # pin@v0.3.0
 
   # deploy to GitHub Pages
   deploy:
