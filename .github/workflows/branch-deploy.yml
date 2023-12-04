@@ -82,7 +82,7 @@ jobs:
       # deploy the site to GitHub Pages
       - name: deploy
         id: deployment
-        uses: actions/deploy-pages@9dbe3824824f8a1377b8e298bafde1a50ede43e5 # pin@v2.0.4
+        uses: actions/deploy-pages@de14547edc9944350dc0481aa5b7afb08e75f254 # pin@v2.0.5
 
   # update the deployment result - manually complete the deployment that was created by the branch-deploy action
   result:
